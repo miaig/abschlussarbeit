@@ -16,6 +16,10 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 
 - **Programmiersprache**: Python
 - **Libraries**:
+- **Sensoren**:
+  - LER (Lichtsensor)
+  - Temperatur und Luftfeuchtigkeit
+  - ...
 
 # Docs
 

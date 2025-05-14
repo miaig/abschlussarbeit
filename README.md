@@ -16,7 +16,10 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 
 - **Programmiersprache**: Python
 
-#
+# Arbeitsaufträge
+
+1. Präsentation, GitHub Einrichtung ()
+2.
 
 # Credits
 

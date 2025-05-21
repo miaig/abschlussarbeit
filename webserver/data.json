@@ -4,7 +4,7 @@
     {
       "id": "sensor_001",
       "type": "temperature",
-      "unit": "C",
+      "unit": "°C",
       "readings": [
         { "ts": 1747814400, "value": 22.5 },
         { "ts": 1747818000, "value": 23.0 },

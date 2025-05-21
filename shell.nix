@@ -1,10 +1,14 @@
 { pkgs ? import <nixpkgs> {} }:
-(pkgs.buildFHSUserEnv {
-  name = "pipzone";
-  targetPkgs = pkgs: (with pkgs; [
-    python313
-    python313Packages.pip
-    python313Packages.virtualenv
-  ]);
-  runScript = "bash --init-file /etc/profile";
-}).env
+
+pkgs.mkShell {
+  buildInputs = [
+    (pkgs.python3.withPackages (ps: with ps; [
+      matplotlib
+      numpy
+    ]))
+  ];
+  shellHook = ''
+    export SHELL=${pkgs.zsh}/bin/zsh
+    exec ${pkgs.zsh}/bin/zsh
+  '';
+}

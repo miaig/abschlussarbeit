@@ -1,6 +1,10 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from datetime import datetime
 import json
+import matplotlib.pyplot as plt
+import mimetypes
+
+mimetypes.add_type("image/png", ".png")
 
 # Opening JSON file
 f = open("data.json")
@@ -16,26 +20,61 @@ for i in data["sensors"]:
 # Closing file
 f.close()
 
+
+def create_plot(id: str, unit: str, xaxis: list, yaxis: list):
+    plt.plot(xaxis, yaxis)
+    plt.title(id)
+    plt.xlabel("Time")
+    plt.ylabel(unit)
+    plt.savefig(f"plots/{id}.png")  # Save to file
+    plt.close()
+
+
 htmldata = ""
+
+
+def sortfunc(körber):
+    return körber
+
 
 for i in sensors:
     type = sensors[i][0]
     unit = sensors[i][1]
     readings = ""
-    sensorrange = len(sensors[i][2]) if len(sensors[i][2]) < 5 else 4
+    datapoints: list = []
+    sensorrange = len(sensors[i][2]) if len(sensors[i][2]) < 5 else 5
     for j in range(sensorrange):
+        datapoints.append([])
         ts = sensors[i][2][j]["ts"]
-        time = datetime.fromtimestamp(ts).strftime("%d.%m.%Y %H:%M.%S")
         value = sensors[i][2][j]["value"]
-        readings += f"{time}: {value}{unit}<br>"
+        datapoints[j].append(ts)
+        datapoints[j].append(value)
+        datapoints[j].append(unit)
+    datapoints.sort(key=sortfunc, reverse=True)
+
+    graphdata: list = [[], []]
+    for j in datapoints:
+        ts = j[0]
+        time = datetime.fromtimestamp(ts).strftime("%d.%m.%Y %H:%M.%S")
+        timeNoDate = datetime.fromtimestamp(ts).strftime("%H:%M.%S")
+        value = j[1]
+        unit = j[2]
+        # print(f"{time} {j}")
+        readings += f"{time}> {value}{unit}<br>"
+        graphdata[0].append(timeNoDate)
+        graphdata[1].append(value)
+
+    create_plot(i, unit, graphdata[0], graphdata[1])
+
     htmldata += f"""
     <p>Id: {i}</p>
     <p>Type: {type}</p>
     <p>Readings:</p>
     <div style="margin-left: 40px;">
         {readings}
+        <img src="/plots/{i}.png" alt="Graph">
     </div>
-    <p>---------------------------------------------</p>
+    <hr>
     """
 
 html = f"""
@@ -46,7 +85,7 @@ html = f"""
         <title>Sensor Data</title>
         <style>
             * {{
-                font-family: 'Times New Roman';
+                font-family: 'Caskaydia Cove NF';
                 font-size: 18px;
                 color: white;
                 background: #1C1C1C;
@@ -63,7 +102,7 @@ html = f"""
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
-        self.send_header("Content-type", "text/html")
+        # self.send_header("Content-type", "text/html")
         self.end_headers()
         self.wfile.write(html.encode("utf-8"))
 

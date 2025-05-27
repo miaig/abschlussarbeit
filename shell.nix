@@ -5,10 +5,11 @@ pkgs.mkShell {
     (pkgs.python3.withPackages (ps: with ps; [
       matplotlib
       numpy
+      flask
     ]))
   ];
-  shellHook = ''
-    export SHELL=${pkgs.zsh}/bin/zsh
-    exec ${pkgs.zsh}/bin/zsh
-  '';
+  # shellHook = ''
+  #   export SHELL=${pkgs.zsh}/bin/zsh
+  #   exec ${pkgs.zsh}/bin/zsh
+  # '';
 }

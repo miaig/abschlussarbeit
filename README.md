@@ -1,4 +1,4 @@
-# Project Name
+# PiWebSense
 
 ## Milestones
 
@@ -14,27 +14,25 @@ The Raspberry Pi should be integratable to a Home Assistant Server and be used a
 
 Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor gateway.
 
-## Tech Stack
+## Tech Stack / Hardware Requirements
 
-- **Raspberry Pi model**:
-- **Programming languages**: Python
-- **Frameworks/tools/Libraries**: (e.g., Flask, GPIO Zero)
+- **Raspberry Pi**: Model 4
+- **Programming languages**: Python, jinja2
+- **Frameworks/tools/Libraries**:
   - Webserver:
-    - Python Http Server
+    - Flask
     - Json
-  - Sensors:
-
-## Hardware Requirements
-
-- Raspberry Pi with [model/specs]
+  - Sensors: Temperature,
 - **Sensors**:
-  - LER (Lichtsensor)
-  - Temperatur und Luftfeuchtigkeit
+  - LDR (Lightsensor)
+  - Sound Detector
+  - Temperature
+  - Temperature and humidity
   - ...
 
 ## Docs
 
-- Json format:
+- The data needs to be providet in the following format:
 
   ```Json
       {
@@ -78,6 +76,8 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
   This file holds the requirements for pip
 - `shell.nix`
   This file is only used on nixos and for the nix packagemananger
+- `.envrc`
+  This is also a bit of linuz nixos magic to automatically set up the development environment using direnv
 - `main.py`
   The main file for the project
 
@@ -112,4 +112,17 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 
 ### License
 
-MIT
+PiWebSense
+Copyright (C) 2025 Kieler, Chiara
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License Version 3.0 as published by
+the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.

@@ -1,0 +1,171 @@
+{
+    "id": "lightSensorDigital",
+    "type": "light",
+    "unit": "state",
+    "reading": [
+        {
+            "ts": 1748449834,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449836,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449838,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449840,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449842,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449844,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449846,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449848,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449850,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449852,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449854,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449856,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449858,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449860,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449927,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449929,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449931,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449933,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449935,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449937,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449939,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449941,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449943,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449945,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449947,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449953,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449955,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449957,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449959,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449961,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449963,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449965,
+            "state": "dunkel"
+        },
+        {
+            "ts": 1748449967,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449969,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449971,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449973,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449992,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449994,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449996,
+            "state": "hell"
+        },
+        {
+            "ts": 1748449998,
+            "state": "hell"
+        },
+        {
+            "ts": 1748450000,
+            "state": "hell"
+        }
+    ]
+}

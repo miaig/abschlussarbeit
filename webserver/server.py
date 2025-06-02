@@ -1,28 +1,39 @@
+# Copyright 2025 Kieler, Chiara
+#
+# Licensed under the AGPLv3.0 (the "License");
+# You may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# https://www.gnu.org/licenses/
+
+
 from datetime import datetime
-import re
-from flask import Flask, send_from_directory, render_template
+from flask import Flask, render_template
 import json
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 # Global Variables:
-jsonpath = "data.json"
-htmldata = ""
+jsonpath = "data_big.json"
+sensors: dict = {}
 
 
-# class Entries:
-#     def __init__(self, id: str, ts: list, value: list):
-#         self.id = id
-#         templist: list = []
-#         for i in range(len(ts)):
-#             templist.append([ts[i], value[i]])
-#         self.entries: list = templist
-#
-#     def printEntries(self):
-#         print(self.entries)
-#
-#
-# tese = Entries("sensor0", [1, 2, 3, 4], [10, 20, 30, 40])
-# tese.printEntries()
+def readJson():
+    f = open(jsonpath)
+    jsondata = json.load(f)  # returns JSON object as a dictionary
+    for i in jsondata["sensors"]:  # Iterating through the json list
+        timestamps: list = []
+        values: list = []
+        # print(len(i["readings"]))
+        for j in range(len(i["readings"])):
+            timestamps.append(i["readings"][j]["ts"])
+            values.append(i["readings"][j]["value"])
+        # print(i)
+        # print(i["readings"][1])
+        # print("\n")
+        sensors[i["id"]] = Sensor(i["id"], i["unit"], i["type"], timestamps, values)
+    f.close()
 
 
 class Sensor:
@@ -97,112 +108,12 @@ class Sensor:
         plt.close()
         return path
 
-    # def formatLine(self, ts: int):
-    #     for i in self.ts:
-    #         if i == ts:
-    #             return f"{self.timedate}> {self.values[]}"
 
+readJson()
 
-# Json
-f = open(jsonpath)
-jsondata = json.load(f)  # returns JSON object as a dictionary
-# sensordict = dict()
-sensors: dict = {}
-for i in jsondata["sensors"]:  # Iterating through the json list
-    timestamps: list = []
-    values: list = []
-    # print(len(i["readings"]))
-    for j in range(len(i["readings"])):
-        timestamps.append(i["readings"][j]["ts"])
-        values.append(i["readings"][j]["value"])
-    # print(i)
-    # print(i["readings"][1])
-    # print("\n")
-    # sensordict[i["id"]] = [i["type"], i["unit"], i["readings"]]
-    # print(sensordict[i["id"]])
-    sensors[i["id"]] = Sensor(i["id"], i["unit"], i["type"], timestamps, values)
+# print("\n")
+# print(sensors)
 
-
-f.close()
-print("\n")
-# print(sensordict)
-print(sensors)
-# print(sensors["sensor_001"].getReadings(limit=2, reversed=True, timetype="time"))
-
-# for i in sensordict:
-#     type = sensordict[i][0]
-#     unit = sensordict[i][1]
-#     readings = ""
-#     datapoints: list = []
-#     sensorrange = len(sensordict[i][2]) if len(sensordict[i][2]) < 5 else 5
-#     for j in range(sensorrange):
-#         datapoints.append([])
-#         ts = sensordict[i][2][j]["ts"]
-#         value = sensordict[i][2][j]["value"]
-#         datapoints[j].append(ts)
-#         datapoints[j].append(value)
-#         datapoints[j].append(unit)
-#     datapoints.sort(reverse=True)
-#
-#     graphdata: list = [[], []]
-#     for j in datapoints:
-#         ts = j[0]
-#         time = datetime.fromtimestamp(ts).strftime("%d.%m.%Y %H:%M.%S")
-#         timeNoDate = datetime.fromtimestamp(ts).strftime("%H:%M.%S")
-#         value = j[1]
-#         unit = j[2]
-#         # print(f"{time} {j}")
-#         readings += f"{time}> {value}{unit}<br>"
-#         graphdata[0].append(timeNoDate)
-#         graphdata[1].append(value)
-#
-#     # create_plot(i, unit, graphdata[0], graphdata[1])
-#
-#     htmldata += f"""
-#     <p>Id: {i}</p>
-#     <p>Type: {type}</p>
-#     <p>Readings:</p>
-#     <div style="margin-left: 40px;">
-#         {readings}
-#         <img src="/plots/{i}.png" alt="Graph">
-#     </div>
-#     <hr>"""
-#
-# html = f"""
-#     <!DOCTYPE html>
-#     <html lang="en">
-#     <head>
-#         <meta charset="UTF-8">
-#         <title>Sensor Data</title>
-#         <style>
-#             * {{
-#                 font-family: 'Caskaydia Cove NF';
-#                 font-size: 18px;
-#                 color: white;
-#                 background: #1C1C1C;
-#             }}
-#         </style>
-#     </head>
-#     <body>
-#         {htmldata}
-#     </body>
-#     </html>
-# """
-
-
-# class MyHandler(BaseHTTPRequestHandler):
-#     def do_GET(self):
-#         self.send_response(200)
-#         # self.send_header("Content-type", "text/html")
-#         self.end_headers()
-#         self.wfile.write(html.encode("utf-8"))
-#
-#
-# if __name__ == "__main__":
-#     server_address = ("", 8000)
-#     httpd = HTTPServer(server_address, MyHandler)
-#     print("Serving on http://localhost:8000")
-#     httpd.serve_forever()
 
 app = Flask(__name__)
 
@@ -210,13 +121,6 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html", data=sensors)
-
-
-# @app.before_request
-# def before_request():
-#     for sensor in sensors.values():
-#         print(sensor)
-#         sensor.renderPlot()
 
 
 if __name__ == "__main__":

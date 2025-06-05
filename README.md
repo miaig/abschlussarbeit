@@ -81,6 +81,9 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 - `main.py`
   The main file for the project
 
+- `The Graphs`
+    https://ron.sh/creating-real-time-charts-with-fastapi/
+
 ### Git Help
 
 ![A Git Cheatsheet](gitHelp.png "Git Cheatsheet")

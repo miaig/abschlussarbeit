@@ -11,6 +11,7 @@ from datetime import datetime
 from flask import Flask, render_template
 import json
 import matplotlib
+import hashlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
@@ -45,6 +46,7 @@ class Sensor:
         self.values: list = value
         self.timeonly: list = []
         self.timedate: list = []
+        self.hash = hashlib.sha256(repr(ts).encode()).hexdigest()
         for i in ts:
             # print(i)
             self.timeonly.append(datetime.fromtimestamp(int(i)).strftime("%H:%M.%S"))
@@ -108,6 +110,9 @@ class Sensor:
         plt.close()
         return path
 
+    def getHash(self):
+        return self.hash
+
 
 readJson()
 
@@ -122,6 +127,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html", data=sensors)
 
+@app.before_request
+def reload_data():
+    readJson()
+    print("hello")
 
 if __name__ == "__main__":
     app.run(debug=True)

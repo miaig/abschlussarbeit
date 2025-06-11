@@ -86,15 +86,28 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 
 ### Git Help
 
-![A Git Cheatsheet](gitHelp.png "Git Cheatsheet")
+![A Git Cheatsheet](images/gitHelp.png "Git Cheatsheet")
 
 ### MarkDown Help
 
-![A MarkDown Cheatsheet](mdHelp.png "MarkDown Cheatsheet")
+![A MarkDown Cheatsheet](images/mdHelp.png "MarkDown Cheatsheet")
 
 ### Html Help
 
-![A Html Cheatsheet](htmlHelp.png "Html Cheatsheet")
+![A Html Cheatsheet](images/htmlHelp.png "Html Cheatsheet")
+
+### Css Help
+
+![A Css Cheatsheet](images/cssHelp.png "Css Cheatsheet")
+
+### JavaScript Help
+
+![A JavaScript Cheatsheet](images/javascriptHelp.png "JavaScript Cheatsheet")
+
+### Jinja Help
+
+![A Jinja Cheatsheet](images/jinjaHelp.png "Jinja Cheatsheet")
+
 
 ## Arbeitsaufträge / Aufgabeneinteilung
 

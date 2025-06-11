@@ -86,6 +86,29 @@ class Sensor:
     def getReadingsTime(self):
         return self.getReadings(timetype="time")
 
+    def getChartJSData(self, limit=5, reversed=False, timetype="ts"):
+        datalist: list = [[],[]]
+        match timetype:
+            case "ts":
+                for i in range(limit if limit < len(self.ts) else len(self.ts)):
+                    datalist[0].append(self.ts[i])
+                    datalist[1].append(self.values[i])
+            case "time":
+                for i in range(limit if limit < len(self.ts) else len(self.ts)):
+                    datalist[0].append(self.timeonly[i])
+                    datalist[1].append(self.values[i])
+            case "timedate":
+                for i in range(limit if limit < len(self.ts) else len(self.ts)):
+                    datalist[0].append(self.timedate[i])
+                    datalist[1].append(self.values[i])
+            case _:
+                return "ERROR: timetype must be one of 'ts', 'time', 'timedate'"
+        if reversed:
+            datalist[0].reverse()
+            datalist[1].reverse()
+        return datalist
+
+
     def getValueByTimestamp(self, ts: int):
         c = 0
         for i in self.ts:

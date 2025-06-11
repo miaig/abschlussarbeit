@@ -15,6 +15,9 @@
       href="{{ url_for('static', filename='favicon.ico') }}"
     />
     <title>Sensor Data</title>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
     <style>
       @font-face {
         font-family: 'CaskaydiaCove Nerd Font';
@@ -36,12 +39,14 @@
           justify-content: space-between; /* Optional: space between items */
       }
       .imgbox {
-          background-color: #4CAF50; /* Background color for the boxes */
+          <!-- background-color: #4CAF50; /* Background color for the boxes */ -->
           display: flex; /* Enable flexbox for inner content */
           justify-content: right; /* Center text horizontally */
+          width: 100%;
+          max-width: 1000px;
       }
       .txtbox {
-          background-color: #C4FA05; /* Background color for the boxes */
+          <!-- background-color: #C4FA05; /* Background color for the boxes */ -->
           justify-content: left; /* Center text horizontally */
       }
       .txtbox h1 {
@@ -72,14 +77,34 @@
           {% endfor %}
         </ul>
       </div>
-      <div class = "imgbox">
-        <img
-          src="{{ url_for('static', filename= sensor[1].renderPlot()) }}"
-          alt="Graph"
-        />
-      </div>
+      <canvas id={{ sensor[1].getId() }} class = "imgbox"></canvas> 
     </div>
-    <sub style="text-align: right; float: right;"> {{ sensor[1].getHash() }} </sub>    
+    <script>
+      var sensordata = {{ sensor[1].getChartJSData(timetype="timedate")|tojson }};
+      console.log(sensordata);
+      new Chart('{{ sensor[1].getId() }}', {
+          type: 'line',
+          data: {
+              labels: sensordata[0],
+              datasets: [{
+                  label: '{{ sensor[1].getId() }}',
+                  data: sensordata[1],
+                  borderColor: 'rgba(245, 40, 145, 1)',
+                  backgroundColor: 'rgba(245, 40, 145, 0.2)',
+                  tension: 0.4,
+                  fill: true
+              }]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+    </script>
     {% endfor %}
   </body>
 </html>

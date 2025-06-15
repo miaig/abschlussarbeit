@@ -7,7 +7,7 @@ import os
 
 dhtDevice = adafruit_dht.DHT11(board.D23)
 
-json_file = "ky015_data.json"
+json_file = "json/ky015_data.json"
 
 datatemphum = {
     "id": "sensor_002/3",

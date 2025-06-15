@@ -13,7 +13,7 @@ light_pin.direction = digitalio.Direction.INPUT
 data_template = {
     "id": "sensor_004",
     "type": "light",
-    "unit": "state", 
+    "unit": "bool", 
     "reading": []
 }
 
@@ -32,10 +32,7 @@ def capture_and_store(state):
     timestamp = int(time.time())
     data = load_data()
 
-    data["reading"].append({
-        "ts": timestamp,
-        "state": state
-    })
+    data["reading"].append({"ts": timestamp,"value": state})
 
     if len(data["reading"]) > MAX_ENTRIES:
         data["reading"] = data["reading"][-MAX_ENTRIES:]
@@ -45,9 +42,9 @@ def capture_and_store(state):
 try:
     while True:
         if light_pin.value:
-            light_state = "hell"
+            light_state = True
         else:
-            light_state = "dunkel"
+            light_state = False
 
         print(f"Lichtzustand: {light_state}")
         capture_and_store(light_state)

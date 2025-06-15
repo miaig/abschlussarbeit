@@ -33,12 +33,9 @@ def save_data(data):
 def capture_and_store():
     state = GPIO.input(SENSOR_PIN)
     timestamp = int(time.time())  # Unix-Zeitstempel (int)
-    noise = 1 if state == 0 else 0
+    noise = True if state == 0 else False
 
-    entry = {
-        "ts": timestamp,
-        "value": noise
-    }
+    entry = { "ts": timestamp, "value": noise}
 
     data = load_data()
     data["readings"].append(entry)

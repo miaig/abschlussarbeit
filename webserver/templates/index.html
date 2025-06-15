@@ -1,3 +1,11 @@
+<!-- Copyright 2025 Kieler, Chiara -->
+<!---->
+<!-- Licensed under the AGPLv3.0 (the "License"); -->
+<!-- You may not use this file except in compliance with the License. -->
+<!-- You may obtain a copy of the License at -->
+<!---->
+<!-- https://www.gnu.org/licenses/ -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,28 +15,96 @@
       href="{{ url_for('static', filename='favicon.ico') }}"
     />
     <title>Sensor Data</title>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
     <style>
+      @font-face {
+        font-family: 'CaskaydiaCove Nerd Font';
+        src: url('/static/CaskaydiaCove-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
       * {
-        font-family: "Caskaydia Cove NF";
+        font-family: "CaskaydiaCove Nerd Font";
         font-size: 18px;
         color: white;
         background: #1c1c1c;
+        <!-- margin: 0; -->
+        <!-- padding: 0; -->
+        <!-- box-sizing: border-box; -->
       }
+      .container {
+          display: flex; /* Enable flexbox */
+          justify-content: space-between; /* Optional: space between items */
+      }
+      .imgbox {
+          <!-- background-color: #4CAF50; /* Background color for the boxes */ -->
+          display: flex; /* Enable flexbox for inner content */
+          justify-content: right; /* Center text horizontally */
+          width: 100%;
+          max-width: 1000px;
+      }
+      .txtbox {
+          <!-- background-color: #C4FA05; /* Background color for the boxes */ -->
+          justify-content: left; /* Center text horizontally */
+      }
+      .txtbox h1 {
+          margin: 0;
+          padding: 0.5em 0; /* optional: add some vertical padding */
+      }
+      .txtbox h2 {
+          margin: 0;
+          padding: 0em 0; /* optional: add some vertical padding */
+      }
+
     </style>
   </head>
   <body>
-    <h1>Sensor Readings</h1>
+    <div class = "container">
+      <div class = "txtbox" style="text-align: center; margin: auto;">
+        <h1>Sensor Readings</h1>
+      </div>
+    </div>
     <h2>{% for sensor in data.items() %}</h2>
+    <hr>
     <h2>{{ sensor[1].getId() }}[{{ sensor[1].getType() }}]</h2>
-    <ul>
-      {% for key,value in sensor[1].getReadingsTimeDate().items() %}
-      <li>{{ key }}» {{ value }}{{ sensor[1].getUnit() }}</li>
-      {% endfor %}
-      <img
-        src="{{ url_for('static', filename='plots/' + sensor[1].getId() + '.png') }}"
-        alt="Graph"
-      />
-    </ul>
+    <div class = "container">
+      <div class = "txtbox">
+        <ul>
+          {% for key,value in sensor[1].getReadingsTimeDate().items() %}
+          <li>{{ key }}» {{ value }}{{ sensor[1].getUnit() }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <canvas id={{ sensor[1].getId() }} class = "imgbox"></canvas> 
+    </div>
+    <script>
+      var sensordata = {{ sensor[1].getChartJSData(timetype="timedate")|tojson }};
+      console.log(sensordata);
+      new Chart('{{ sensor[1].getId() }}', {
+          type: 'line',
+          data: {
+              labels: sensordata[0],
+              datasets: [{
+                  label: '{{ sensor[1].getId() }}',
+                  data: sensordata[1],
+                  borderColor: 'rgba(245, 40, 145, 1)',
+                  backgroundColor: 'rgba(245, 40, 145, 0.2)',
+                  tension: 0.4,
+                  fill: true
+              }]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+    </script>
     {% endfor %}
   </body>
 </html>

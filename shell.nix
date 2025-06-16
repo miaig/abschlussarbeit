@@ -6,10 +6,7 @@ pkgs.mkShell {
       matplotlib
       numpy
       flask
+      rpi-gpio
     ]))
   ];
-  # shellHook = ''
-  #   export SHELL=${pkgs.zsh}/bin/zsh
-  #   exec ${pkgs.zsh}/bin/zsh
-  # '';
 }

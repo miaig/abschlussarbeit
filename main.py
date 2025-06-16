@@ -1,4 +1,4 @@
-# Copyright 2025 Kieler, Chiara
+# Copyright 2025 Mia, Chiara
 #
 # Licensed under the AGPLv3.0 (the "License");
 # You may not use this file except in compliance with the License.

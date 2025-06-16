@@ -17,18 +17,31 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 ## Tech Stack / Hardware Requirements
 
 - **Raspberry Pi**: Model 4
-- **Programming languages**: Python, jinja2
+- **Programming languages**: Python, jinja, HTML, CSS, JavaScript
 - **Frameworks/tools/Libraries**:
   - Webserver:
-    - Flask
-    - Json
-  - Sensors: Temperature,
+    - flask
+    - json
+    - matplotlib
+    - hashlib
+    - socket
+    - threading
+    - os
+    - datetime
+  - Sensors:
+    - datetime
+    - time
+    - json
+    - os
+    - board
+    - adafruit_dht
+    - digitalio
+    - RPI.GPIO
+    
 - **Sensors**:
   - LDR (Lightsensor)
   - Sound Detector
-  - Temperature
   - Temperature and humidity
-  - ...
 
 ## Docs
 
@@ -72,17 +85,12 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
     }
   ```
 
-- `requirements.txt`
-  This file holds the requirements for pip
 - `shell.nix`
-  This file is only used on nixos and for the nix packagemananger
+  This file is only used for the nix packagemananger to set up a development environment for the Webserver only
 - `.envrc`
-  This is also a bit of linuz nixos magic to automatically set up the development environment using direnv
+  This is also a bit of linux nixos magic to automatically set up the development environment using direnv
 - `main.py`
   The main file for the project
-
-- `The Graphs`
-    https://ron.sh/creating-real-time-charts-with-fastapi/
 
 ### Git Help
 
@@ -111,25 +119,22 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 
 ## Arbeitsaufträge / Aufgabeneinteilung
 
-### Zu Vergeben
 
-- Präsentation
-
-| Kieler                            | Chiara                                        |
+| Mia                               | Chiara                                        |
 | --------------------------------- | --------------------------------------------- |
 | Git                               | Daten von RPI erfassen und sauber abspeichern |
-| Readme                            |                                               |
+| Readme                            | Präsentation                                  |
 | Daten an einem Webserver anzeigen |                                               |
 
 ### Acknowledgments
 
 [Chiara](https://git.miaig.dev/chiara)
-[Kieler](https://git.miaig.dev/mia)
+[Mia](https://git.miaig.dev/mia)
 
 ### License
 
 PiWebSense
-Copyright (C) 2025 Kieler, Chiara
+Copyright (C) 2025 Mia, Chiara
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License Version 3.0 as published by

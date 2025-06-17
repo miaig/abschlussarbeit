@@ -5,17 +5,18 @@ from datetime import datetime
 import os
 
 SENSOR_PIN = 17
-JSON_FILE = "ky037_data.json"
+JSON_FILE = "json/ky037_data.json"
 INTERVAL = 1
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(SENSOR_PIN, GPIO.IN)
 
 
-SENSOR_INFO = {
+datamikro = {
+    "location": "Hausstrasse - 2",
     "id": "sensor_001",
-    "type": "noise",  # Geräuschsensor
-    "unit": "bool",   # 1 oder 0 (geräusch ja/nein)
+    "type": "noise",
+    "unit": "bool",
     "readings": []
 }
 
@@ -24,7 +25,7 @@ def load_data():
         with open(JSON_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
     else:
-        return SENSOR_INFO.copy()  # frisches Grundgerüst
+        return datamikro.copy()
 
 def save_data(data):
     with open(JSON_FILE, 'w', encoding='utf-8') as f:
@@ -32,7 +33,7 @@ def save_data(data):
 
 def capture_and_store():
     state = GPIO.input(SENSOR_PIN)
-    timestamp = int(time.time())  # Unix-Zeitstempel (int)
+    timestamp = int(time.time())
     noise = True if state == 0 else False
 
     entry = { "ts": timestamp, "value": noise}

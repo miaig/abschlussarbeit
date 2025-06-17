@@ -9,23 +9,30 @@ dhtDevice = adafruit_dht.DHT11(board.D23)
 
 json_file = "json/ky015_data.json"
 
-datatemphum = {
-    "id": "sensor_002/3",
-    "type": "environment",
-    "unit": {
-         "temperature": "°C",
-         "humidity": "%"
-    },
-    "reading": []
+datatemp = {
+     "location": "Hausstrasse - 3",
+     "sensors": [
+        {
+            "id": "sensor_002",
+            "type": "temperature",
+            "unit": "°C",
+            "readings": []
+        },
+        {
+            "id": "sensor_003",
+            "type": "humidity",
+            "unit": "%",
+            "readings": []
+        }
+    ]
 }
-
 
 def load_data():
             if os.path.exists(json_file):
                 with open(json_file, 'r', encoding='utf-8') as f:
                     return json.load(f)
             else:
-                return datatemphum.copy()
+                return datatemp.copy()
 
 def save_data(data):
             with open(json_file, 'w', encoding='utf-8') as f:
@@ -35,17 +42,18 @@ max_entries=3000
 
 def capture_and_store(temperature_c,humidity):
     timestamp = int(time.time())
+    data=load_data()
 
-    data = load_data()
-    data["reading"].append({
-           "ts": timestamp,
-           "temperature": temperature_c,
-           "humidity":humidity
-    })
+    temp_sensor = next(s for s in data["sensors"] if s["type"] == "temperature")
+    hum_sensor = next(s for s in data["sensors"] if s["type"] == "humidity")
 
+    temp_sensor["readings"].append({"ts": timestamp, "value": temperature_c})
+    hum_sensor["readings"].append({"ts": timestamp, "value": humidity})
 
-    if len(data["reading"]) > max_entries:
-        data["reading"] = data["reading"][-max_entries:]
+    if len(temp_sensor["readings"]) > max_entries:
+        temp_sensor["readings"] = temp_sensor["readings"][-max_entries:]
+    if len(hum_sensor["readings"]) > max_entries:
+        hum_sensor["readings"] = hum_sensor["readings"][-max_entries:]
 
     save_data(data)
 

@@ -4,17 +4,18 @@ import os
 import board
 import digitalio
 
-json_file = "ky018_data.json"
+json_file = "json/ky018_data.json"
 MAX_ENTRIES = 3000
 
 light_pin = digitalio.DigitalInOut(board.D17)
 light_pin.direction = digitalio.Direction.INPUT
 
-data_template = {
+dataldr = {
+    "location": "Hausstrasse - 1",
     "id": "sensor_004",
     "type": "light",
     "unit": "bool", 
-    "reading": []
+    "readings": []
 }
 
 def load_data():
@@ -22,7 +23,7 @@ def load_data():
         with open(json_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     else:
-        return data_template.copy()
+        return dataldr.copy()
 
 def save_data(data):
     with open(json_file, 'w', encoding='utf-8') as f:
@@ -32,10 +33,10 @@ def capture_and_store(state):
     timestamp = int(time.time())
     data = load_data()
 
-    data["reading"].append({"ts": timestamp,"value": state})
+    data["readings"].append({"ts": timestamp,"value": state})
 
-    if len(data["reading"]) > MAX_ENTRIES:
-        data["reading"] = data["reading"][-MAX_ENTRIES:]
+    if len(data["readings"]) > MAX_ENTRIES:
+        data["readings"] = data["readings"][-MAX_ENTRIES:]
 
     save_data(data)
 

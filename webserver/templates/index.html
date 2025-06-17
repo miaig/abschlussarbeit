@@ -1,4 +1,4 @@
-<!-- Copyright 2025 Kieler, Chiara -->
+<!-- Copyright 2025 Mia, Chiara -->
 <!---->
 <!-- Licensed under the AGPLv3.0 (the "License"); -->
 <!-- You may not use this file except in compliance with the License. -->
@@ -38,6 +38,17 @@
           display: flex; /* Enable flexbox */
           justify-content: space-between; /* Optional: space between items */
       }
+      .namecontainer {
+          display: flex; /* Enable flexbox */
+          justify-content: space-between; /* Optional: space between items */
+          align-items: center;
+      }
+      .left {
+
+      }
+      .right {
+    
+      }
       .imgbox {
           <!-- background-color: #4CAF50; /* Background color for the boxes */ -->
           display: flex; /* Enable flexbox for inner content */
@@ -68,7 +79,14 @@
     </div>
     <h2>{% for sensor in data.items() %}</h2>
     <hr>
-    <h2>{{ sensor[1].getId() }}[{{ sensor[1].getType() }}]</h2>
+    <div class = "namecontainer">
+      <div class = "right">
+        <h2>{{ sensor[1].getId() }}[{{ sensor[1].getType() }}]</h2>
+      </div>
+      <div class = "left">
+        <h3>{{ sensor[0][0] }}</h3>
+      </div>
+    </div>  
     <div class = "container">
       <div class = "txtbox">
         <ul>

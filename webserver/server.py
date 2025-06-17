@@ -1,4 +1,4 @@
-# Copyright 2025 Kieler, Chiara
+# Copyright 2025 Mia, Chiara
 #
 # Licensed under the AGPLv3.0 (the "License");
 # You may not use this file except in compliance with the License.
@@ -12,6 +12,9 @@ from flask import Flask, render_template
 import json
 import matplotlib
 import hashlib
+import socket
+import threading
+import os
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
@@ -28,13 +31,61 @@ def readJson():
         values: list = []
         # print(len(i["readings"]))
         for j in range(len(i["readings"])):
-            timestamps.append(i["readings"][j]["ts"])
-            values.append(i["readings"][j]["value"])
+            timestamps.insert(0, i["readings"][j]["ts"])
+            values.insert(0, i["readings"][j]["value"])
         # print(i)
         # print(i["readings"][1])
         # print("\n")
-        sensors[i["id"]] = Sensor(i["id"], i["unit"], i["type"], timestamps, values)
+        sensors[(jsondata["location"], i["id"])] = Sensor(i["id"], i["unit"], i["type"], timestamps, values)
     f.close()
+
+
+def handle_connection(conn, addr):
+    print(f"[+] Connected from {addr}")
+    buffer = ""
+    try:
+        while True:
+            data = conn.recv(4096)
+            if not data:
+                break  # client closed connection
+            buffer += data.decode("utf-8")
+
+            while '\n' in buffer:
+                line, buffer = buffer.split('\n', 1)
+                if line.strip():
+                    try:
+                        message = json.loads(line)
+                        process_message(message)
+                    except json.JSONDecodeError:
+                        print("[!] Invalid JSON")
+    finally:
+        conn.close()
+        print(f"[-] Disconnected from {addr}")
+
+def process_message(message):
+    location = message.get("location", "unknown_location")
+    for s in message.get("sensors", []):
+        sensor_id = s["id"]
+        key = (location, sensor_id)
+
+        # Check if this is a new sensor (history), or just live data
+        if "type" in s and "unit" in s:
+            # Full metadata available
+            timestamps = [r["ts"] for r in s["readings"]]
+            values = [r["value"] for r in s["readings"]]
+            sensors[key] = Sensor(sensor_id, s["unit"], s["type"], timestamps, values)
+        else:
+            # Live update, assume sensor already exists
+            if key not in sensors:
+                print(f"[!] Live data received for unknown sensor {key}, ignoring.")
+                continue
+
+            sensor = sensors[key]
+            for reading in s.get("readings", []):
+                sensor.ts.insert(0, reading["ts"])
+                sensor.timeonly.insert(0, datetime.fromtimestamp(int(reading["ts"])).strftime("%H:%M.%S"))
+                sensor.timedate.insert(0, datetime.fromtimestamp(int(reading["ts"])).strftime("%d.%m.%Y %H:%M.%S"))
+                sensor.values.insert(0, reading["value"])
 
 
 class Sensor:
@@ -49,10 +100,8 @@ class Sensor:
         self.hash = hashlib.sha256(repr(ts).encode()).hexdigest()
         for i in ts:
             # print(i)
-            self.timeonly.append(datetime.fromtimestamp(int(i)).strftime("%H:%M.%S"))
-            self.timedate.append(
-                datetime.fromtimestamp(i).strftime("%d.%m.%Y %H:%M.%S")
-            )
+            self.timeonly.insert(0, datetime.fromtimestamp(int(i)).strftime("%H:%M.%S"))
+            self.timedate.insert(0, datetime.fromtimestamp(i).strftime("%d.%m.%Y %H:%M.%S"))
 
     def getId(self):
         return self.id
@@ -63,7 +112,8 @@ class Sensor:
     def getType(self):
         return self.type
 
-    def getReadings(self, limit=5, reversed=True, timetype="ts"):
+    def getReadings(self, limit=10, reversed=True, timetype="ts"):
+        limit += 1
         datadic: dict = {}
         match timetype:
             case "ts":
@@ -74,6 +124,8 @@ class Sensor:
                     datadic[self.timeonly[i]] = self.values[i]
             case "timedate":
                 for i in range(limit if limit < len(self.ts) else len(self.ts)):
+                    # print(i)
+                    # print(self.values[i])
                     datadic[self.timedate[i]] = self.values[i]
             case _:
                 return "ERROR: timetype must be one of 'ts', 'time', 'timedate'"
@@ -86,7 +138,8 @@ class Sensor:
     def getReadingsTime(self):
         return self.getReadings(timetype="time")
 
-    def getChartJSData(self, limit=5, reversed=False, timetype="ts"):
+    def getChartJSData(self, limit=10, reversed=False, timetype="ts"):
+        limit += 1
         datalist: list = [[],[]]
         match timetype:
             case "ts":
@@ -103,7 +156,7 @@ class Sensor:
                     datalist[1].append(self.values[i])
             case _:
                 return "ERROR: timetype must be one of 'ts', 'time', 'timedate'"
-        if reversed:
+        if not reversed:
             datalist[0].reverse()
             datalist[1].reverse()
         return datalist
@@ -137,7 +190,20 @@ class Sensor:
         return self.hash
 
 
-readJson()
+def start_socket_server(host='0.0.0.0', port=9999):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind((host, port))
+        s.listen()
+        print(f"[*] Server listening on {host}:{port}")
+        while True:
+            conn, addr = s.accept()
+            threading.Thread(target=handle_connection, args=(conn, addr), daemon=True).start()
+
+# if __name__ == "__main__":
+#     start_server()
+
+
+# readJson()
 
 # print("\n")
 # print(sensors)
@@ -150,10 +216,12 @@ app = Flask(__name__)
 def index():
     return render_template("index.html", data=sensors)
 
-@app.before_request
-def reload_data():
-    readJson()
-    print("hello")
+# @app.before_request
+# def reload_data():
+#     readJson()
+#     print("hello")
 
 if __name__ == "__main__":
+    if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
+        threading.Thread(target=start_socket_server, daemon=True).start()
     app.run(debug=True)

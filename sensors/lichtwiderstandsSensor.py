@@ -3,6 +3,7 @@ import json
 import os
 import board
 import digitalio
+from sender import send_data as s
 
 json_file = "json/ky018_data.json"
 MAX_ENTRIES = 3000
@@ -12,10 +13,23 @@ light_pin.direction = digitalio.Direction.INPUT
 
 dataldr = {
     "location": "Hausstrasse - 1",
-    "id": "sensor_004",
-    "type": "light",
-    "unit": "bool", 
-    "readings": []
+    "sensors": [
+        {
+        "id": "sensor_004",
+        "type": "light",
+        "unit": "bool", 
+        "readings": []
+        }
+    ]
+}
+datalive = {
+    "location": "Hausstrasse - 1",
+    "sensors": [
+        {
+            "id": "sensor_004",
+            "readings": [{}]
+        }
+    ]
 }
 
 def load_data():
@@ -32,13 +46,22 @@ def save_data(data):
 def capture_and_store(state):
     timestamp = int(time.time())
     data = load_data()
+    livetemp = datalive.copy()
 
-    data["readings"].append({"ts": timestamp,"value": state})
+    entry = { "ts": timestamp, "value": state}
 
-    if len(data["readings"]) > MAX_ENTRIES:
-        data["readings"] = data["readings"][-MAX_ENTRIES:]
+    data["sensors"][0]["readings"].append(entry)
+    livetemp["sensors"][0]["readings"][0] = {entry}
 
+    if len(data["sensors"][0]["readings"]) > MAX_ENTRIES:
+        data["sensors"][0]["readings"] = data["sensors"][0]["readings"][-MAX_ENTRIES:]
+    
+    s(livetemp)
+    livetemp.clear()
     save_data(data)
+
+print(load_data())
+s(load_data())
 
 try:
     while True:

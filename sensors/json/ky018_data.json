@@ -1,171 +1,3748 @@
 {
-    "id": "lightSensorDigital",
-    "type": "light",
-    "unit": "state",
-    "reading": [
+    "location": "Hausstrasse - 1",
+    "sensors": [
         {
-            "ts": 1748449834,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449836,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449838,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449840,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449842,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449844,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449846,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449848,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449850,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449852,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449854,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449856,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449858,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449860,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449927,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449929,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449931,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449933,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449935,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449937,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449939,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449941,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449943,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449945,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449947,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449953,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449955,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449957,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449959,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449961,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449963,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449965,
-            "state": "dunkel"
-        },
-        {
-            "ts": 1748449967,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449969,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449971,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449973,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449992,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449994,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449996,
-            "state": "hell"
-        },
-        {
-            "ts": 1748449998,
-            "state": "hell"
-        },
-        {
-            "ts": 1748450000,
-            "state": "hell"
+            "id": "sensor_004",
+            "type": "light",
+            "unit": "bool",
+            "readings": [
+                {
+                    "ts": 1750187669,
+                    "value": false
+                },
+                {
+                    "ts": 1750187671,
+                    "value": false
+                },
+                {
+                    "ts": 1750187673,
+                    "value": false
+                },
+                {
+                    "ts": 1750187675,
+                    "value": false
+                },
+                {
+                    "ts": 1750187677,
+                    "value": false
+                },
+                {
+                    "ts": 1750187679,
+                    "value": false
+                },
+                {
+                    "ts": 1750187681,
+                    "value": false
+                },
+                {
+                    "ts": 1750187683,
+                    "value": false
+                },
+                {
+                    "ts": 1750187685,
+                    "value": false
+                },
+                {
+                    "ts": 1750187687,
+                    "value": false
+                },
+                {
+                    "ts": 1750187689,
+                    "value": false
+                },
+                {
+                    "ts": 1750187691,
+                    "value": false
+                },
+                {
+                    "ts": 1750187693,
+                    "value": false
+                },
+                {
+                    "ts": 1750187695,
+                    "value": false
+                },
+                {
+                    "ts": 1750187697,
+                    "value": false
+                },
+                {
+                    "ts": 1750187698,
+                    "value": false
+                },
+                {
+                    "ts": 1750187700,
+                    "value": false
+                },
+                {
+                    "ts": 1750187702,
+                    "value": false
+                },
+                {
+                    "ts": 1750187704,
+                    "value": false
+                },
+                {
+                    "ts": 1750187706,
+                    "value": false
+                },
+                {
+                    "ts": 1750187708,
+                    "value": false
+                },
+                {
+                    "ts": 1750187710,
+                    "value": false
+                },
+                {
+                    "ts": 1750187712,
+                    "value": false
+                },
+                {
+                    "ts": 1750187714,
+                    "value": false
+                },
+                {
+                    "ts": 1750187716,
+                    "value": false
+                },
+                {
+                    "ts": 1750187718,
+                    "value": false
+                },
+                {
+                    "ts": 1750187720,
+                    "value": false
+                },
+                {
+                    "ts": 1750187722,
+                    "value": false
+                },
+                {
+                    "ts": 1750187724,
+                    "value": false
+                },
+                {
+                    "ts": 1750187726,
+                    "value": false
+                },
+                {
+                    "ts": 1750187728,
+                    "value": false
+                },
+                {
+                    "ts": 1750187731,
+                    "value": false
+                },
+                {
+                    "ts": 1750188147,
+                    "value": false
+                },
+                {
+                    "ts": 1750188149,
+                    "value": false
+                },
+                {
+                    "ts": 1750188151,
+                    "value": false
+                },
+                {
+                    "ts": 1750188153,
+                    "value": false
+                },
+                {
+                    "ts": 1750188155,
+                    "value": false
+                },
+                {
+                    "ts": 1750188157,
+                    "value": false
+                },
+                {
+                    "ts": 1750188160,
+                    "value": false
+                },
+                {
+                    "ts": 1750188162,
+                    "value": false
+                },
+                {
+                    "ts": 1750188164,
+                    "value": false
+                },
+                {
+                    "ts": 1750188166,
+                    "value": false
+                },
+                {
+                    "ts": 1750188168,
+                    "value": false
+                },
+                {
+                    "ts": 1750188170,
+                    "value": false
+                },
+                {
+                    "ts": 1750188172,
+                    "value": false
+                },
+                {
+                    "ts": 1750188175,
+                    "value": false
+                },
+                {
+                    "ts": 1750188177,
+                    "value": false
+                },
+                {
+                    "ts": 1750188179,
+                    "value": false
+                },
+                {
+                    "ts": 1750188181,
+                    "value": false
+                },
+                {
+                    "ts": 1750188183,
+                    "value": false
+                },
+                {
+                    "ts": 1750188185,
+                    "value": false
+                },
+                {
+                    "ts": 1750188187,
+                    "value": false
+                },
+                {
+                    "ts": 1750188189,
+                    "value": false
+                },
+                {
+                    "ts": 1750188191,
+                    "value": false
+                },
+                {
+                    "ts": 1750188193,
+                    "value": false
+                },
+                {
+                    "ts": 1750188195,
+                    "value": false
+                },
+                {
+                    "ts": 1750188197,
+                    "value": false
+                },
+                {
+                    "ts": 1750188199,
+                    "value": false
+                },
+                {
+                    "ts": 1750188201,
+                    "value": false
+                },
+                {
+                    "ts": 1750188203,
+                    "value": false
+                },
+                {
+                    "ts": 1750188205,
+                    "value": false
+                },
+                {
+                    "ts": 1750188207,
+                    "value": false
+                },
+                {
+                    "ts": 1750188209,
+                    "value": false
+                },
+                {
+                    "ts": 1750188212,
+                    "value": false
+                },
+                {
+                    "ts": 1750188214,
+                    "value": false
+                },
+                {
+                    "ts": 1750188216,
+                    "value": false
+                },
+                {
+                    "ts": 1750188218,
+                    "value": false
+                },
+                {
+                    "ts": 1750188220,
+                    "value": false
+                },
+                {
+                    "ts": 1750188222,
+                    "value": false
+                },
+                {
+                    "ts": 1750188224,
+                    "value": false
+                },
+                {
+                    "ts": 1750188227,
+                    "value": false
+                },
+                {
+                    "ts": 1750188229,
+                    "value": false
+                },
+                {
+                    "ts": 1750188231,
+                    "value": false
+                },
+                {
+                    "ts": 1750188485,
+                    "value": false
+                },
+                {
+                    "ts": 1750188487,
+                    "value": false
+                },
+                {
+                    "ts": 1750188489,
+                    "value": false
+                },
+                {
+                    "ts": 1750188491,
+                    "value": false
+                },
+                {
+                    "ts": 1750188493,
+                    "value": false
+                },
+                {
+                    "ts": 1750188495,
+                    "value": false
+                },
+                {
+                    "ts": 1750188497,
+                    "value": false
+                },
+                {
+                    "ts": 1750188499,
+                    "value": false
+                },
+                {
+                    "ts": 1750188502,
+                    "value": false
+                },
+                {
+                    "ts": 1750188504,
+                    "value": false
+                },
+                {
+                    "ts": 1750188636,
+                    "value": false
+                },
+                {
+                    "ts": 1750188638,
+                    "value": false
+                },
+                {
+                    "ts": 1750188640,
+                    "value": false
+                },
+                {
+                    "ts": 1750188642,
+                    "value": false
+                },
+                {
+                    "ts": 1750188644,
+                    "value": false
+                },
+                {
+                    "ts": 1750188646,
+                    "value": false
+                },
+                {
+                    "ts": 1750188648,
+                    "value": false
+                },
+                {
+                    "ts": 1750188651,
+                    "value": false
+                },
+                {
+                    "ts": 1750188653,
+                    "value": false
+                },
+                {
+                    "ts": 1750188655,
+                    "value": false
+                },
+                {
+                    "ts": 1750188731,
+                    "value": false
+                },
+                {
+                    "ts": 1750188733,
+                    "value": false
+                },
+                {
+                    "ts": 1750188735,
+                    "value": false
+                },
+                {
+                    "ts": 1750188737,
+                    "value": false
+                },
+                {
+                    "ts": 1750188739,
+                    "value": false
+                },
+                {
+                    "ts": 1750188741,
+                    "value": false
+                },
+                {
+                    "ts": 1750188743,
+                    "value": false
+                },
+                {
+                    "ts": 1750188745,
+                    "value": false
+                },
+                {
+                    "ts": 1750188747,
+                    "value": false
+                },
+                {
+                    "ts": 1750188750,
+                    "value": false
+                },
+                {
+                    "ts": 1750188752,
+                    "value": false
+                },
+                {
+                    "ts": 1750188754,
+                    "value": false
+                },
+                {
+                    "ts": 1750188756,
+                    "value": false
+                },
+                {
+                    "ts": 1750188758,
+                    "value": false
+                },
+                {
+                    "ts": 1750188760,
+                    "value": false
+                },
+                {
+                    "ts": 1750188762,
+                    "value": false
+                },
+                {
+                    "ts": 1750188764,
+                    "value": false
+                },
+                {
+                    "ts": 1750188766,
+                    "value": false
+                },
+                {
+                    "ts": 1750188768,
+                    "value": false
+                },
+                {
+                    "ts": 1750188770,
+                    "value": false
+                },
+                {
+                    "ts": 1750188772,
+                    "value": false
+                },
+                {
+                    "ts": 1750188774,
+                    "value": false
+                },
+                {
+                    "ts": 1750188776,
+                    "value": false
+                },
+                {
+                    "ts": 1750188778,
+                    "value": false
+                },
+                {
+                    "ts": 1750188780,
+                    "value": false
+                },
+                {
+                    "ts": 1750188782,
+                    "value": false
+                },
+                {
+                    "ts": 1750188784,
+                    "value": false
+                },
+                {
+                    "ts": 1750188786,
+                    "value": false
+                },
+                {
+                    "ts": 1750188788,
+                    "value": false
+                },
+                {
+                    "ts": 1750188790,
+                    "value": false
+                },
+                {
+                    "ts": 1750188792,
+                    "value": false
+                },
+                {
+                    "ts": 1750188794,
+                    "value": false
+                },
+                {
+                    "ts": 1750188797,
+                    "value": false
+                },
+                {
+                    "ts": 1750188799,
+                    "value": false
+                },
+                {
+                    "ts": 1750188801,
+                    "value": false
+                },
+                {
+                    "ts": 1750188803,
+                    "value": false
+                },
+                {
+                    "ts": 1750188805,
+                    "value": false
+                },
+                {
+                    "ts": 1750188809,
+                    "value": false
+                },
+                {
+                    "ts": 1750188811,
+                    "value": false
+                },
+                {
+                    "ts": 1750188813,
+                    "value": false
+                },
+                {
+                    "ts": 1750188815,
+                    "value": false
+                },
+                {
+                    "ts": 1750188887,
+                    "value": false
+                },
+                {
+                    "ts": 1750188889,
+                    "value": false
+                },
+                {
+                    "ts": 1750188891,
+                    "value": false
+                },
+                {
+                    "ts": 1750188893,
+                    "value": false
+                },
+                {
+                    "ts": 1750188904,
+                    "value": false
+                },
+                {
+                    "ts": 1750188906,
+                    "value": false
+                },
+                {
+                    "ts": 1750188908,
+                    "value": false
+                },
+                {
+                    "ts": 1750188910,
+                    "value": false
+                },
+                {
+                    "ts": 1750188912,
+                    "value": false
+                },
+                {
+                    "ts": 1750188914,
+                    "value": false
+                },
+                {
+                    "ts": 1750188916,
+                    "value": false
+                },
+                {
+                    "ts": 1750188918,
+                    "value": false
+                },
+                {
+                    "ts": 1750188921,
+                    "value": false
+                },
+                {
+                    "ts": 1750188923,
+                    "value": false
+                },
+                {
+                    "ts": 1750188925,
+                    "value": false
+                },
+                {
+                    "ts": 1750188927,
+                    "value": false
+                },
+                {
+                    "ts": 1750188929,
+                    "value": false
+                },
+                {
+                    "ts": 1750188931,
+                    "value": false
+                },
+                {
+                    "ts": 1750188933,
+                    "value": false
+                },
+                {
+                    "ts": 1750188935,
+                    "value": false
+                },
+                {
+                    "ts": 1750188937,
+                    "value": false
+                },
+                {
+                    "ts": 1750188939,
+                    "value": false
+                },
+                {
+                    "ts": 1750188941,
+                    "value": false
+                },
+                {
+                    "ts": 1750188943,
+                    "value": false
+                },
+                {
+                    "ts": 1750188945,
+                    "value": false
+                },
+                {
+                    "ts": 1750188947,
+                    "value": false
+                },
+                {
+                    "ts": 1750188949,
+                    "value": false
+                },
+                {
+                    "ts": 1750188951,
+                    "value": false
+                },
+                {
+                    "ts": 1750188953,
+                    "value": false
+                },
+                {
+                    "ts": 1750188955,
+                    "value": false
+                },
+                {
+                    "ts": 1750188957,
+                    "value": false
+                },
+                {
+                    "ts": 1750188959,
+                    "value": false
+                },
+                {
+                    "ts": 1750188961,
+                    "value": false
+                },
+                {
+                    "ts": 1750188963,
+                    "value": false
+                },
+                {
+                    "ts": 1750189013,
+                    "value": false
+                },
+                {
+                    "ts": 1750189015,
+                    "value": false
+                },
+                {
+                    "ts": 1750189017,
+                    "value": false
+                },
+                {
+                    "ts": 1750189179,
+                    "value": false
+                },
+                {
+                    "ts": 1750189181,
+                    "value": false
+                },
+                {
+                    "ts": 1750189219,
+                    "value": false
+                },
+                {
+                    "ts": 1750189221,
+                    "value": false
+                },
+                {
+                    "ts": 1750189223,
+                    "value": false
+                },
+                {
+                    "ts": 1750189280,
+                    "value": false
+                },
+                {
+                    "ts": 1750189282,
+                    "value": false
+                },
+                {
+                    "ts": 1750189413,
+                    "value": false
+                },
+                {
+                    "ts": 1750189415,
+                    "value": false
+                },
+                {
+                    "ts": 1750191864,
+                    "value": false
+                },
+                {
+                    "ts": 1750191889,
+                    "value": false
+                },
+                {
+                    "ts": 1750191891,
+                    "value": false
+                },
+                {
+                    "ts": 1750191929,
+                    "value": false
+                },
+                {
+                    "ts": 1750191931,
+                    "value": false
+                },
+                {
+                    "ts": 1750191975,
+                    "value": false
+                },
+                {
+                    "ts": 1750191977,
+                    "value": false
+                },
+                {
+                    "ts": 1750191979,
+                    "value": false
+                },
+                {
+                    "ts": 1750191981,
+                    "value": false
+                },
+                {
+                    "ts": 1750191983,
+                    "value": false
+                },
+                {
+                    "ts": 1750191985,
+                    "value": false
+                },
+                {
+                    "ts": 1750191987,
+                    "value": false
+                },
+                {
+                    "ts": 1750191989,
+                    "value": false
+                },
+                {
+                    "ts": 1750191991,
+                    "value": false
+                },
+                {
+                    "ts": 1750191993,
+                    "value": false
+                },
+                {
+                    "ts": 1750191995,
+                    "value": false
+                },
+                {
+                    "ts": 1750191997,
+                    "value": false
+                },
+                {
+                    "ts": 1750191999,
+                    "value": false
+                },
+                {
+                    "ts": 1750192001,
+                    "value": false
+                },
+                {
+                    "ts": 1750192003,
+                    "value": false
+                },
+                {
+                    "ts": 1750192005,
+                    "value": false
+                },
+                {
+                    "ts": 1750192007,
+                    "value": false
+                },
+                {
+                    "ts": 1750192009,
+                    "value": false
+                },
+                {
+                    "ts": 1750192011,
+                    "value": false
+                },
+                {
+                    "ts": 1750192014,
+                    "value": false
+                },
+                {
+                    "ts": 1750192016,
+                    "value": false
+                },
+                {
+                    "ts": 1750192018,
+                    "value": false
+                },
+                {
+                    "ts": 1750192020,
+                    "value": false
+                },
+                {
+                    "ts": 1750192022,
+                    "value": false
+                },
+                {
+                    "ts": 1750192024,
+                    "value": false
+                },
+                {
+                    "ts": 1750192026,
+                    "value": false
+                },
+                {
+                    "ts": 1750192028,
+                    "value": false
+                },
+                {
+                    "ts": 1750192030,
+                    "value": false
+                },
+                {
+                    "ts": 1750192032,
+                    "value": false
+                },
+                {
+                    "ts": 1750192034,
+                    "value": false
+                },
+                {
+                    "ts": 1750192036,
+                    "value": false
+                },
+                {
+                    "ts": 1750192038,
+                    "value": false
+                },
+                {
+                    "ts": 1750192040,
+                    "value": false
+                },
+                {
+                    "ts": 1750192042,
+                    "value": false
+                },
+                {
+                    "ts": 1750192044,
+                    "value": false
+                },
+                {
+                    "ts": 1750192046,
+                    "value": false
+                },
+                {
+                    "ts": 1750192048,
+                    "value": false
+                },
+                {
+                    "ts": 1750192050,
+                    "value": false
+                },
+                {
+                    "ts": 1750192052,
+                    "value": false
+                },
+                {
+                    "ts": 1750192054,
+                    "value": false
+                },
+                {
+                    "ts": 1750192056,
+                    "value": false
+                },
+                {
+                    "ts": 1750192058,
+                    "value": false
+                },
+                {
+                    "ts": 1750192060,
+                    "value": false
+                },
+                {
+                    "ts": 1750192062,
+                    "value": false
+                },
+                {
+                    "ts": 1750192064,
+                    "value": false
+                },
+                {
+                    "ts": 1750192066,
+                    "value": false
+                },
+                {
+                    "ts": 1750192068,
+                    "value": false
+                },
+                {
+                    "ts": 1750192070,
+                    "value": false
+                },
+                {
+                    "ts": 1750192072,
+                    "value": false
+                },
+                {
+                    "ts": 1750192074,
+                    "value": false
+                },
+                {
+                    "ts": 1750192076,
+                    "value": false
+                },
+                {
+                    "ts": 1750192078,
+                    "value": false
+                },
+                {
+                    "ts": 1750192080,
+                    "value": false
+                },
+                {
+                    "ts": 1750192082,
+                    "value": false
+                },
+                {
+                    "ts": 1750192084,
+                    "value": false
+                },
+                {
+                    "ts": 1750192086,
+                    "value": false
+                },
+                {
+                    "ts": 1750192088,
+                    "value": false
+                },
+                {
+                    "ts": 1750192090,
+                    "value": false
+                },
+                {
+                    "ts": 1750192092,
+                    "value": false
+                },
+                {
+                    "ts": 1750192094,
+                    "value": false
+                },
+                {
+                    "ts": 1750192096,
+                    "value": false
+                },
+                {
+                    "ts": 1750192098,
+                    "value": false
+                },
+                {
+                    "ts": 1750192100,
+                    "value": false
+                },
+                {
+                    "ts": 1750192103,
+                    "value": false
+                },
+                {
+                    "ts": 1750192105,
+                    "value": false
+                },
+                {
+                    "ts": 1750192107,
+                    "value": false
+                },
+                {
+                    "ts": 1750192109,
+                    "value": false
+                },
+                {
+                    "ts": 1750192111,
+                    "value": false
+                },
+                {
+                    "ts": 1750192113,
+                    "value": false
+                },
+                {
+                    "ts": 1750192115,
+                    "value": false
+                },
+                {
+                    "ts": 1750192117,
+                    "value": false
+                },
+                {
+                    "ts": 1750192119,
+                    "value": false
+                },
+                {
+                    "ts": 1750192121,
+                    "value": false
+                },
+                {
+                    "ts": 1750192123,
+                    "value": false
+                },
+                {
+                    "ts": 1750192125,
+                    "value": false
+                },
+                {
+                    "ts": 1750192127,
+                    "value": false
+                },
+                {
+                    "ts": 1750192129,
+                    "value": false
+                },
+                {
+                    "ts": 1750192131,
+                    "value": false
+                },
+                {
+                    "ts": 1750192133,
+                    "value": false
+                },
+                {
+                    "ts": 1750192135,
+                    "value": false
+                },
+                {
+                    "ts": 1750192137,
+                    "value": false
+                },
+                {
+                    "ts": 1750192139,
+                    "value": false
+                },
+                {
+                    "ts": 1750192141,
+                    "value": false
+                },
+                {
+                    "ts": 1750192143,
+                    "value": false
+                },
+                {
+                    "ts": 1750192145,
+                    "value": false
+                },
+                {
+                    "ts": 1750192147,
+                    "value": false
+                },
+                {
+                    "ts": 1750192149,
+                    "value": false
+                },
+                {
+                    "ts": 1750192151,
+                    "value": false
+                },
+                {
+                    "ts": 1750192153,
+                    "value": false
+                },
+                {
+                    "ts": 1750192155,
+                    "value": false
+                },
+                {
+                    "ts": 1750192157,
+                    "value": false
+                },
+                {
+                    "ts": 1750192159,
+                    "value": false
+                },
+                {
+                    "ts": 1750192162,
+                    "value": false
+                },
+                {
+                    "ts": 1750192164,
+                    "value": false
+                },
+                {
+                    "ts": 1750192166,
+                    "value": false
+                },
+                {
+                    "ts": 1750192168,
+                    "value": false
+                },
+                {
+                    "ts": 1750192170,
+                    "value": false
+                },
+                {
+                    "ts": 1750192172,
+                    "value": false
+                },
+                {
+                    "ts": 1750192174,
+                    "value": false
+                },
+                {
+                    "ts": 1750192176,
+                    "value": false
+                },
+                {
+                    "ts": 1750192178,
+                    "value": false
+                },
+                {
+                    "ts": 1750192180,
+                    "value": false
+                },
+                {
+                    "ts": 1750192182,
+                    "value": false
+                },
+                {
+                    "ts": 1750192184,
+                    "value": false
+                },
+                {
+                    "ts": 1750192186,
+                    "value": false
+                },
+                {
+                    "ts": 1750192188,
+                    "value": false
+                },
+                {
+                    "ts": 1750192190,
+                    "value": false
+                },
+                {
+                    "ts": 1750192192,
+                    "value": false
+                },
+                {
+                    "ts": 1750192194,
+                    "value": false
+                },
+                {
+                    "ts": 1750192196,
+                    "value": false
+                },
+                {
+                    "ts": 1750192198,
+                    "value": false
+                },
+                {
+                    "ts": 1750192200,
+                    "value": false
+                },
+                {
+                    "ts": 1750192202,
+                    "value": false
+                },
+                {
+                    "ts": 1750192204,
+                    "value": false
+                },
+                {
+                    "ts": 1750192206,
+                    "value": false
+                },
+                {
+                    "ts": 1750192208,
+                    "value": false
+                },
+                {
+                    "ts": 1750192210,
+                    "value": false
+                },
+                {
+                    "ts": 1750192212,
+                    "value": false
+                },
+                {
+                    "ts": 1750192214,
+                    "value": false
+                },
+                {
+                    "ts": 1750192216,
+                    "value": false
+                },
+                {
+                    "ts": 1750192218,
+                    "value": false
+                },
+                {
+                    "ts": 1750192220,
+                    "value": false
+                },
+                {
+                    "ts": 1750192222,
+                    "value": false
+                },
+                {
+                    "ts": 1750192224,
+                    "value": false
+                },
+                {
+                    "ts": 1750192226,
+                    "value": false
+                },
+                {
+                    "ts": 1750192228,
+                    "value": false
+                },
+                {
+                    "ts": 1750192230,
+                    "value": false
+                },
+                {
+                    "ts": 1750192232,
+                    "value": false
+                },
+                {
+                    "ts": 1750192234,
+                    "value": false
+                },
+                {
+                    "ts": 1750192236,
+                    "value": false
+                },
+                {
+                    "ts": 1750192238,
+                    "value": false
+                },
+                {
+                    "ts": 1750192241,
+                    "value": false
+                },
+                {
+                    "ts": 1750192243,
+                    "value": false
+                },
+                {
+                    "ts": 1750192245,
+                    "value": false
+                },
+                {
+                    "ts": 1750192247,
+                    "value": false
+                },
+                {
+                    "ts": 1750192249,
+                    "value": false
+                },
+                {
+                    "ts": 1750192251,
+                    "value": false
+                },
+                {
+                    "ts": 1750192253,
+                    "value": false
+                },
+                {
+                    "ts": 1750192255,
+                    "value": false
+                },
+                {
+                    "ts": 1750192257,
+                    "value": false
+                },
+                {
+                    "ts": 1750192259,
+                    "value": false
+                },
+                {
+                    "ts": 1750192261,
+                    "value": false
+                },
+                {
+                    "ts": 1750192263,
+                    "value": false
+                },
+                {
+                    "ts": 1750192265,
+                    "value": false
+                },
+                {
+                    "ts": 1750192267,
+                    "value": false
+                },
+                {
+                    "ts": 1750192269,
+                    "value": false
+                },
+                {
+                    "ts": 1750192271,
+                    "value": false
+                },
+                {
+                    "ts": 1750192273,
+                    "value": false
+                },
+                {
+                    "ts": 1750192275,
+                    "value": false
+                },
+                {
+                    "ts": 1750192277,
+                    "value": false
+                },
+                {
+                    "ts": 1750192279,
+                    "value": false
+                },
+                {
+                    "ts": 1750192281,
+                    "value": false
+                },
+                {
+                    "ts": 1750192283,
+                    "value": false
+                },
+                {
+                    "ts": 1750192285,
+                    "value": false
+                },
+                {
+                    "ts": 1750192287,
+                    "value": false
+                },
+                {
+                    "ts": 1750192289,
+                    "value": false
+                },
+                {
+                    "ts": 1750192291,
+                    "value": false
+                },
+                {
+                    "ts": 1750192293,
+                    "value": false
+                },
+                {
+                    "ts": 1750192295,
+                    "value": false
+                },
+                {
+                    "ts": 1750192297,
+                    "value": false
+                },
+                {
+                    "ts": 1750192299,
+                    "value": false
+                },
+                {
+                    "ts": 1750192301,
+                    "value": false
+                },
+                {
+                    "ts": 1750192304,
+                    "value": false
+                },
+                {
+                    "ts": 1750192306,
+                    "value": false
+                },
+                {
+                    "ts": 1750192308,
+                    "value": false
+                },
+                {
+                    "ts": 1750192310,
+                    "value": false
+                },
+                {
+                    "ts": 1750192312,
+                    "value": false
+                },
+                {
+                    "ts": 1750192314,
+                    "value": false
+                },
+                {
+                    "ts": 1750192316,
+                    "value": false
+                },
+                {
+                    "ts": 1750192318,
+                    "value": false
+                },
+                {
+                    "ts": 1750192320,
+                    "value": false
+                },
+                {
+                    "ts": 1750192322,
+                    "value": false
+                },
+                {
+                    "ts": 1750192324,
+                    "value": false
+                },
+                {
+                    "ts": 1750192326,
+                    "value": false
+                },
+                {
+                    "ts": 1750192328,
+                    "value": false
+                },
+                {
+                    "ts": 1750192330,
+                    "value": false
+                },
+                {
+                    "ts": 1750192332,
+                    "value": false
+                },
+                {
+                    "ts": 1750192334,
+                    "value": false
+                },
+                {
+                    "ts": 1750192336,
+                    "value": false
+                },
+                {
+                    "ts": 1750192338,
+                    "value": false
+                },
+                {
+                    "ts": 1750192340,
+                    "value": false
+                },
+                {
+                    "ts": 1750192342,
+                    "value": false
+                },
+                {
+                    "ts": 1750192344,
+                    "value": false
+                },
+                {
+                    "ts": 1750192346,
+                    "value": false
+                },
+                {
+                    "ts": 1750192348,
+                    "value": false
+                },
+                {
+                    "ts": 1750192350,
+                    "value": false
+                },
+                {
+                    "ts": 1750192352,
+                    "value": false
+                },
+                {
+                    "ts": 1750192354,
+                    "value": false
+                },
+                {
+                    "ts": 1750192356,
+                    "value": false
+                },
+                {
+                    "ts": 1750192359,
+                    "value": false
+                },
+                {
+                    "ts": 1750192361,
+                    "value": false
+                },
+                {
+                    "ts": 1750192363,
+                    "value": false
+                },
+                {
+                    "ts": 1750192365,
+                    "value": false
+                },
+                {
+                    "ts": 1750192367,
+                    "value": false
+                },
+                {
+                    "ts": 1750192369,
+                    "value": false
+                },
+                {
+                    "ts": 1750192371,
+                    "value": false
+                },
+                {
+                    "ts": 1750192373,
+                    "value": false
+                },
+                {
+                    "ts": 1750192375,
+                    "value": false
+                },
+                {
+                    "ts": 1750192377,
+                    "value": false
+                },
+                {
+                    "ts": 1750192379,
+                    "value": false
+                },
+                {
+                    "ts": 1750192381,
+                    "value": false
+                },
+                {
+                    "ts": 1750192383,
+                    "value": false
+                },
+                {
+                    "ts": 1750192385,
+                    "value": false
+                },
+                {
+                    "ts": 1750192387,
+                    "value": false
+                },
+                {
+                    "ts": 1750192389,
+                    "value": false
+                },
+                {
+                    "ts": 1750192391,
+                    "value": false
+                },
+                {
+                    "ts": 1750192393,
+                    "value": false
+                },
+                {
+                    "ts": 1750192395,
+                    "value": false
+                },
+                {
+                    "ts": 1750192397,
+                    "value": false
+                },
+                {
+                    "ts": 1750192399,
+                    "value": false
+                },
+                {
+                    "ts": 1750192401,
+                    "value": false
+                },
+                {
+                    "ts": 1750192403,
+                    "value": false
+                },
+                {
+                    "ts": 1750192405,
+                    "value": false
+                },
+                {
+                    "ts": 1750192407,
+                    "value": false
+                },
+                {
+                    "ts": 1750192410,
+                    "value": false
+                },
+                {
+                    "ts": 1750192412,
+                    "value": false
+                },
+                {
+                    "ts": 1750192414,
+                    "value": false
+                },
+                {
+                    "ts": 1750192416,
+                    "value": false
+                },
+                {
+                    "ts": 1750192418,
+                    "value": false
+                },
+                {
+                    "ts": 1750192420,
+                    "value": false
+                },
+                {
+                    "ts": 1750192422,
+                    "value": false
+                },
+                {
+                    "ts": 1750192424,
+                    "value": false
+                },
+                {
+                    "ts": 1750192426,
+                    "value": false
+                },
+                {
+                    "ts": 1750192428,
+                    "value": false
+                },
+                {
+                    "ts": 1750192430,
+                    "value": false
+                },
+                {
+                    "ts": 1750192432,
+                    "value": false
+                },
+                {
+                    "ts": 1750192434,
+                    "value": false
+                },
+                {
+                    "ts": 1750192436,
+                    "value": false
+                },
+                {
+                    "ts": 1750192438,
+                    "value": false
+                },
+                {
+                    "ts": 1750192440,
+                    "value": false
+                },
+                {
+                    "ts": 1750192442,
+                    "value": false
+                },
+                {
+                    "ts": 1750192444,
+                    "value": false
+                },
+                {
+                    "ts": 1750192446,
+                    "value": false
+                },
+                {
+                    "ts": 1750192448,
+                    "value": false
+                },
+                {
+                    "ts": 1750192450,
+                    "value": false
+                },
+                {
+                    "ts": 1750192452,
+                    "value": false
+                },
+                {
+                    "ts": 1750192454,
+                    "value": false
+                },
+                {
+                    "ts": 1750192456,
+                    "value": false
+                },
+                {
+                    "ts": 1750192458,
+                    "value": false
+                },
+                {
+                    "ts": 1750192460,
+                    "value": false
+                },
+                {
+                    "ts": 1750192462,
+                    "value": false
+                },
+                {
+                    "ts": 1750192464,
+                    "value": false
+                },
+                {
+                    "ts": 1750192466,
+                    "value": false
+                },
+                {
+                    "ts": 1750192468,
+                    "value": false
+                },
+                {
+                    "ts": 1750192470,
+                    "value": false
+                },
+                {
+                    "ts": 1750192472,
+                    "value": false
+                },
+                {
+                    "ts": 1750192475,
+                    "value": false
+                },
+                {
+                    "ts": 1750192477,
+                    "value": false
+                },
+                {
+                    "ts": 1750192479,
+                    "value": false
+                },
+                {
+                    "ts": 1750192481,
+                    "value": false
+                },
+                {
+                    "ts": 1750192483,
+                    "value": false
+                },
+                {
+                    "ts": 1750192485,
+                    "value": false
+                },
+                {
+                    "ts": 1750192487,
+                    "value": false
+                },
+                {
+                    "ts": 1750192489,
+                    "value": false
+                },
+                {
+                    "ts": 1750192491,
+                    "value": false
+                },
+                {
+                    "ts": 1750192706,
+                    "value": false
+                },
+                {
+                    "ts": 1750192708,
+                    "value": false
+                },
+                {
+                    "ts": 1750192711,
+                    "value": false
+                },
+                {
+                    "ts": 1750192713,
+                    "value": false
+                },
+                {
+                    "ts": 1750192715,
+                    "value": false
+                },
+                {
+                    "ts": 1750192717,
+                    "value": false
+                },
+                {
+                    "ts": 1750192719,
+                    "value": false
+                },
+                {
+                    "ts": 1750192730,
+                    "value": false
+                },
+                {
+                    "ts": 1750192732,
+                    "value": false
+                },
+                {
+                    "ts": 1750192734,
+                    "value": false
+                },
+                {
+                    "ts": 1750192736,
+                    "value": false
+                },
+                {
+                    "ts": 1750192738,
+                    "value": false
+                },
+                {
+                    "ts": 1750192740,
+                    "value": false
+                },
+                {
+                    "ts": 1750192742,
+                    "value": false
+                },
+                {
+                    "ts": 1750192744,
+                    "value": false
+                },
+                {
+                    "ts": 1750192746,
+                    "value": false
+                },
+                {
+                    "ts": 1750192748,
+                    "value": false
+                },
+                {
+                    "ts": 1750192750,
+                    "value": false
+                },
+                {
+                    "ts": 1750192752,
+                    "value": false
+                },
+                {
+                    "ts": 1750192754,
+                    "value": false
+                },
+                {
+                    "ts": 1750192756,
+                    "value": false
+                },
+                {
+                    "ts": 1750192758,
+                    "value": false
+                },
+                {
+                    "ts": 1750192760,
+                    "value": false
+                },
+                {
+                    "ts": 1750192763,
+                    "value": false
+                },
+                {
+                    "ts": 1750192765,
+                    "value": false
+                },
+                {
+                    "ts": 1750192767,
+                    "value": false
+                },
+                {
+                    "ts": 1750192769,
+                    "value": false
+                },
+                {
+                    "ts": 1750192771,
+                    "value": false
+                },
+                {
+                    "ts": 1750192773,
+                    "value": false
+                },
+                {
+                    "ts": 1750192775,
+                    "value": false
+                },
+                {
+                    "ts": 1750192777,
+                    "value": false
+                },
+                {
+                    "ts": 1750192779,
+                    "value": false
+                },
+                {
+                    "ts": 1750192781,
+                    "value": false
+                },
+                {
+                    "ts": 1750192783,
+                    "value": false
+                },
+                {
+                    "ts": 1750192785,
+                    "value": false
+                },
+                {
+                    "ts": 1750192787,
+                    "value": false
+                },
+                {
+                    "ts": 1750192789,
+                    "value": false
+                },
+                {
+                    "ts": 1750192791,
+                    "value": false
+                },
+                {
+                    "ts": 1750192793,
+                    "value": false
+                },
+                {
+                    "ts": 1750192795,
+                    "value": false
+                },
+                {
+                    "ts": 1750192797,
+                    "value": false
+                },
+                {
+                    "ts": 1750192799,
+                    "value": false
+                },
+                {
+                    "ts": 1750192801,
+                    "value": false
+                },
+                {
+                    "ts": 1750192803,
+                    "value": false
+                },
+                {
+                    "ts": 1750192805,
+                    "value": false
+                },
+                {
+                    "ts": 1750192807,
+                    "value": false
+                },
+                {
+                    "ts": 1750192810,
+                    "value": false
+                },
+                {
+                    "ts": 1750192812,
+                    "value": false
+                },
+                {
+                    "ts": 1750192814,
+                    "value": false
+                },
+                {
+                    "ts": 1750192816,
+                    "value": false
+                },
+                {
+                    "ts": 1750192818,
+                    "value": false
+                },
+                {
+                    "ts": 1750192820,
+                    "value": false
+                },
+                {
+                    "ts": 1750192822,
+                    "value": false
+                },
+                {
+                    "ts": 1750192824,
+                    "value": false
+                },
+                {
+                    "ts": 1750192826,
+                    "value": false
+                },
+                {
+                    "ts": 1750192828,
+                    "value": false
+                },
+                {
+                    "ts": 1750192830,
+                    "value": false
+                },
+                {
+                    "ts": 1750192832,
+                    "value": false
+                },
+                {
+                    "ts": 1750192834,
+                    "value": false
+                },
+                {
+                    "ts": 1750192836,
+                    "value": false
+                },
+                {
+                    "ts": 1750192838,
+                    "value": false
+                },
+                {
+                    "ts": 1750192840,
+                    "value": false
+                },
+                {
+                    "ts": 1750192842,
+                    "value": false
+                },
+                {
+                    "ts": 1750192844,
+                    "value": false
+                },
+                {
+                    "ts": 1750192846,
+                    "value": false
+                },
+                {
+                    "ts": 1750192848,
+                    "value": false
+                },
+                {
+                    "ts": 1750192850,
+                    "value": false
+                },
+                {
+                    "ts": 1750192852,
+                    "value": false
+                },
+                {
+                    "ts": 1750192854,
+                    "value": false
+                },
+                {
+                    "ts": 1750192856,
+                    "value": false
+                },
+                {
+                    "ts": 1750192858,
+                    "value": false
+                },
+                {
+                    "ts": 1750192860,
+                    "value": false
+                },
+                {
+                    "ts": 1750192862,
+                    "value": false
+                },
+                {
+                    "ts": 1750192864,
+                    "value": false
+                },
+                {
+                    "ts": 1750192866,
+                    "value": false
+                },
+                {
+                    "ts": 1750192868,
+                    "value": false
+                },
+                {
+                    "ts": 1750192870,
+                    "value": false
+                },
+                {
+                    "ts": 1750192872,
+                    "value": false
+                },
+                {
+                    "ts": 1750192874,
+                    "value": false
+                },
+                {
+                    "ts": 1750192876,
+                    "value": false
+                },
+                {
+                    "ts": 1750192878,
+                    "value": false
+                },
+                {
+                    "ts": 1750192880,
+                    "value": false
+                },
+                {
+                    "ts": 1750192882,
+                    "value": false
+                },
+                {
+                    "ts": 1750192884,
+                    "value": false
+                },
+                {
+                    "ts": 1750192886,
+                    "value": false
+                },
+                {
+                    "ts": 1750192889,
+                    "value": false
+                },
+                {
+                    "ts": 1750192891,
+                    "value": false
+                },
+                {
+                    "ts": 1750192893,
+                    "value": false
+                },
+                {
+                    "ts": 1750192895,
+                    "value": false
+                },
+                {
+                    "ts": 1750192897,
+                    "value": false
+                },
+                {
+                    "ts": 1750192899,
+                    "value": false
+                },
+                {
+                    "ts": 1750192901,
+                    "value": false
+                },
+                {
+                    "ts": 1750192903,
+                    "value": false
+                },
+                {
+                    "ts": 1750192905,
+                    "value": false
+                },
+                {
+                    "ts": 1750192907,
+                    "value": false
+                },
+                {
+                    "ts": 1750192909,
+                    "value": false
+                },
+                {
+                    "ts": 1750192911,
+                    "value": false
+                },
+                {
+                    "ts": 1750192913,
+                    "value": false
+                },
+                {
+                    "ts": 1750192915,
+                    "value": false
+                },
+                {
+                    "ts": 1750192917,
+                    "value": false
+                },
+                {
+                    "ts": 1750192919,
+                    "value": false
+                },
+                {
+                    "ts": 1750192921,
+                    "value": false
+                },
+                {
+                    "ts": 1750192923,
+                    "value": false
+                },
+                {
+                    "ts": 1750192925,
+                    "value": false
+                },
+                {
+                    "ts": 1750192927,
+                    "value": false
+                },
+                {
+                    "ts": 1750192929,
+                    "value": false
+                },
+                {
+                    "ts": 1750192931,
+                    "value": false
+                },
+                {
+                    "ts": 1750192933,
+                    "value": false
+                },
+                {
+                    "ts": 1750192935,
+                    "value": false
+                },
+                {
+                    "ts": 1750192937,
+                    "value": false
+                },
+                {
+                    "ts": 1750192939,
+                    "value": false
+                },
+                {
+                    "ts": 1750192941,
+                    "value": false
+                },
+                {
+                    "ts": 1750192943,
+                    "value": false
+                },
+                {
+                    "ts": 1750192945,
+                    "value": false
+                },
+                {
+                    "ts": 1750192947,
+                    "value": false
+                },
+                {
+                    "ts": 1750192949,
+                    "value": false
+                },
+                {
+                    "ts": 1750192952,
+                    "value": false
+                },
+                {
+                    "ts": 1750192954,
+                    "value": false
+                },
+                {
+                    "ts": 1750192956,
+                    "value": false
+                },
+                {
+                    "ts": 1750192958,
+                    "value": false
+                },
+                {
+                    "ts": 1750192960,
+                    "value": false
+                },
+                {
+                    "ts": 1750192962,
+                    "value": false
+                },
+                {
+                    "ts": 1750192964,
+                    "value": false
+                },
+                {
+                    "ts": 1750192966,
+                    "value": false
+                },
+                {
+                    "ts": 1750192968,
+                    "value": false
+                },
+                {
+                    "ts": 1750192970,
+                    "value": false
+                },
+                {
+                    "ts": 1750192972,
+                    "value": false
+                },
+                {
+                    "ts": 1750192974,
+                    "value": false
+                },
+                {
+                    "ts": 1750192976,
+                    "value": false
+                },
+                {
+                    "ts": 1750192978,
+                    "value": false
+                },
+                {
+                    "ts": 1750192980,
+                    "value": false
+                },
+                {
+                    "ts": 1750192982,
+                    "value": false
+                },
+                {
+                    "ts": 1750192984,
+                    "value": false
+                },
+                {
+                    "ts": 1750192986,
+                    "value": false
+                },
+                {
+                    "ts": 1750192988,
+                    "value": false
+                },
+                {
+                    "ts": 1750192990,
+                    "value": false
+                },
+                {
+                    "ts": 1750192992,
+                    "value": false
+                },
+                {
+                    "ts": 1750192994,
+                    "value": false
+                },
+                {
+                    "ts": 1750192996,
+                    "value": false
+                },
+                {
+                    "ts": 1750192998,
+                    "value": false
+                },
+                {
+                    "ts": 1750193001,
+                    "value": false
+                },
+                {
+                    "ts": 1750193003,
+                    "value": false
+                },
+                {
+                    "ts": 1750193005,
+                    "value": false
+                },
+                {
+                    "ts": 1750193007,
+                    "value": false
+                },
+                {
+                    "ts": 1750193009,
+                    "value": false
+                },
+                {
+                    "ts": 1750193011,
+                    "value": false
+                },
+                {
+                    "ts": 1750193013,
+                    "value": false
+                },
+                {
+                    "ts": 1750193015,
+                    "value": false
+                },
+                {
+                    "ts": 1750193017,
+                    "value": false
+                },
+                {
+                    "ts": 1750193019,
+                    "value": false
+                },
+                {
+                    "ts": 1750193021,
+                    "value": false
+                },
+                {
+                    "ts": 1750193023,
+                    "value": false
+                },
+                {
+                    "ts": 1750193025,
+                    "value": false
+                },
+                {
+                    "ts": 1750193027,
+                    "value": false
+                },
+                {
+                    "ts": 1750193029,
+                    "value": false
+                },
+                {
+                    "ts": 1750193031,
+                    "value": false
+                },
+                {
+                    "ts": 1750193033,
+                    "value": false
+                },
+                {
+                    "ts": 1750193035,
+                    "value": false
+                },
+                {
+                    "ts": 1750193037,
+                    "value": false
+                },
+                {
+                    "ts": 1750193039,
+                    "value": false
+                },
+                {
+                    "ts": 1750193041,
+                    "value": false
+                },
+                {
+                    "ts": 1750193043,
+                    "value": false
+                },
+                {
+                    "ts": 1750193045,
+                    "value": false
+                },
+                {
+                    "ts": 1750193047,
+                    "value": false
+                },
+                {
+                    "ts": 1750193049,
+                    "value": false
+                },
+                {
+                    "ts": 1750193051,
+                    "value": false
+                },
+                {
+                    "ts": 1750193054,
+                    "value": false
+                },
+                {
+                    "ts": 1750193056,
+                    "value": false
+                },
+                {
+                    "ts": 1750193058,
+                    "value": false
+                },
+                {
+                    "ts": 1750193060,
+                    "value": false
+                },
+                {
+                    "ts": 1750193062,
+                    "value": false
+                },
+                {
+                    "ts": 1750193064,
+                    "value": false
+                },
+                {
+                    "ts": 1750193066,
+                    "value": false
+                },
+                {
+                    "ts": 1750193068,
+                    "value": false
+                },
+                {
+                    "ts": 1750193070,
+                    "value": false
+                },
+                {
+                    "ts": 1750193072,
+                    "value": false
+                },
+                {
+                    "ts": 1750193074,
+                    "value": false
+                },
+                {
+                    "ts": 1750193076,
+                    "value": false
+                },
+                {
+                    "ts": 1750193078,
+                    "value": false
+                },
+                {
+                    "ts": 1750193080,
+                    "value": false
+                },
+                {
+                    "ts": 1750193082,
+                    "value": false
+                },
+                {
+                    "ts": 1750193084,
+                    "value": false
+                },
+                {
+                    "ts": 1750193086,
+                    "value": false
+                },
+                {
+                    "ts": 1750193088,
+                    "value": false
+                },
+                {
+                    "ts": 1750193090,
+                    "value": false
+                },
+                {
+                    "ts": 1750193093,
+                    "value": false
+                },
+                {
+                    "ts": 1750193095,
+                    "value": false
+                },
+                {
+                    "ts": 1750193097,
+                    "value": false
+                },
+                {
+                    "ts": 1750193099,
+                    "value": false
+                },
+                {
+                    "ts": 1750193101,
+                    "value": false
+                },
+                {
+                    "ts": 1750193103,
+                    "value": false
+                },
+                {
+                    "ts": 1750193105,
+                    "value": false
+                },
+                {
+                    "ts": 1750193107,
+                    "value": false
+                },
+                {
+                    "ts": 1750193109,
+                    "value": false
+                },
+                {
+                    "ts": 1750193111,
+                    "value": false
+                },
+                {
+                    "ts": 1750193113,
+                    "value": false
+                },
+                {
+                    "ts": 1750193115,
+                    "value": false
+                },
+                {
+                    "ts": 1750193117,
+                    "value": false
+                },
+                {
+                    "ts": 1750193119,
+                    "value": false
+                },
+                {
+                    "ts": 1750193121,
+                    "value": false
+                },
+                {
+                    "ts": 1750193123,
+                    "value": false
+                },
+                {
+                    "ts": 1750193125,
+                    "value": false
+                },
+                {
+                    "ts": 1750193127,
+                    "value": false
+                },
+                {
+                    "ts": 1750193129,
+                    "value": false
+                },
+                {
+                    "ts": 1750193131,
+                    "value": false
+                },
+                {
+                    "ts": 1750193133,
+                    "value": false
+                },
+                {
+                    "ts": 1750193135,
+                    "value": false
+                },
+                {
+                    "ts": 1750193137,
+                    "value": false
+                },
+                {
+                    "ts": 1750193139,
+                    "value": false
+                },
+                {
+                    "ts": 1750193142,
+                    "value": false
+                },
+                {
+                    "ts": 1750193144,
+                    "value": false
+                },
+                {
+                    "ts": 1750193146,
+                    "value": false
+                },
+                {
+                    "ts": 1750193148,
+                    "value": false
+                },
+                {
+                    "ts": 1750193150,
+                    "value": false
+                },
+                {
+                    "ts": 1750193152,
+                    "value": false
+                },
+                {
+                    "ts": 1750193154,
+                    "value": false
+                },
+                {
+                    "ts": 1750193156,
+                    "value": false
+                },
+                {
+                    "ts": 1750193158,
+                    "value": false
+                },
+                {
+                    "ts": 1750193160,
+                    "value": false
+                },
+                {
+                    "ts": 1750193162,
+                    "value": false
+                },
+                {
+                    "ts": 1750193164,
+                    "value": false
+                },
+                {
+                    "ts": 1750193166,
+                    "value": false
+                },
+                {
+                    "ts": 1750193168,
+                    "value": false
+                },
+                {
+                    "ts": 1750193170,
+                    "value": false
+                },
+                {
+                    "ts": 1750193172,
+                    "value": false
+                },
+                {
+                    "ts": 1750193174,
+                    "value": false
+                },
+                {
+                    "ts": 1750193176,
+                    "value": false
+                },
+                {
+                    "ts": 1750193178,
+                    "value": false
+                },
+                {
+                    "ts": 1750193180,
+                    "value": false
+                },
+                {
+                    "ts": 1750193182,
+                    "value": false
+                },
+                {
+                    "ts": 1750193185,
+                    "value": false
+                },
+                {
+                    "ts": 1750193187,
+                    "value": false
+                },
+                {
+                    "ts": 1750193189,
+                    "value": false
+                },
+                {
+                    "ts": 1750193191,
+                    "value": false
+                },
+                {
+                    "ts": 1750193193,
+                    "value": false
+                },
+                {
+                    "ts": 1750193195,
+                    "value": false
+                },
+                {
+                    "ts": 1750193197,
+                    "value": false
+                },
+                {
+                    "ts": 1750193199,
+                    "value": false
+                },
+                {
+                    "ts": 1750193201,
+                    "value": false
+                },
+                {
+                    "ts": 1750193203,
+                    "value": false
+                },
+                {
+                    "ts": 1750193205,
+                    "value": false
+                },
+                {
+                    "ts": 1750193207,
+                    "value": false
+                },
+                {
+                    "ts": 1750193209,
+                    "value": false
+                },
+                {
+                    "ts": 1750193211,
+                    "value": false
+                },
+                {
+                    "ts": 1750193213,
+                    "value": false
+                },
+                {
+                    "ts": 1750193215,
+                    "value": false
+                },
+                {
+                    "ts": 1750193217,
+                    "value": false
+                },
+                {
+                    "ts": 1750193219,
+                    "value": false
+                },
+                {
+                    "ts": 1750193221,
+                    "value": false
+                },
+                {
+                    "ts": 1750193223,
+                    "value": false
+                },
+                {
+                    "ts": 1750193225,
+                    "value": false
+                },
+                {
+                    "ts": 1750193227,
+                    "value": false
+                },
+                {
+                    "ts": 1750193229,
+                    "value": false
+                },
+                {
+                    "ts": 1750193232,
+                    "value": false
+                },
+                {
+                    "ts": 1750193234,
+                    "value": false
+                },
+                {
+                    "ts": 1750193236,
+                    "value": false
+                },
+                {
+                    "ts": 1750193238,
+                    "value": false
+                },
+                {
+                    "ts": 1750193240,
+                    "value": false
+                },
+                {
+                    "ts": 1750193242,
+                    "value": false
+                },
+                {
+                    "ts": 1750193244,
+                    "value": false
+                },
+                {
+                    "ts": 1750193246,
+                    "value": false
+                },
+                {
+                    "ts": 1750193248,
+                    "value": false
+                },
+                {
+                    "ts": 1750193250,
+                    "value": false
+                },
+                {
+                    "ts": 1750193252,
+                    "value": false
+                },
+                {
+                    "ts": 1750193254,
+                    "value": false
+                },
+                {
+                    "ts": 1750193256,
+                    "value": false
+                },
+                {
+                    "ts": 1750193258,
+                    "value": false
+                },
+                {
+                    "ts": 1750193260,
+                    "value": false
+                },
+                {
+                    "ts": 1750193262,
+                    "value": false
+                },
+                {
+                    "ts": 1750193264,
+                    "value": false
+                },
+                {
+                    "ts": 1750193266,
+                    "value": false
+                },
+                {
+                    "ts": 1750193268,
+                    "value": false
+                },
+                {
+                    "ts": 1750193270,
+                    "value": false
+                },
+                {
+                    "ts": 1750193272,
+                    "value": false
+                },
+                {
+                    "ts": 1750193274,
+                    "value": false
+                },
+                {
+                    "ts": 1750193276,
+                    "value": false
+                },
+                {
+                    "ts": 1750193278,
+                    "value": false
+                },
+                {
+                    "ts": 1750193280,
+                    "value": false
+                },
+                {
+                    "ts": 1750193282,
+                    "value": false
+                },
+                {
+                    "ts": 1750193284,
+                    "value": false
+                },
+                {
+                    "ts": 1750193287,
+                    "value": false
+                },
+                {
+                    "ts": 1750193289,
+                    "value": false
+                },
+                {
+                    "ts": 1750193291,
+                    "value": false
+                },
+                {
+                    "ts": 1750193293,
+                    "value": false
+                },
+                {
+                    "ts": 1750193295,
+                    "value": false
+                },
+                {
+                    "ts": 1750193297,
+                    "value": false
+                },
+                {
+                    "ts": 1750193299,
+                    "value": false
+                },
+                {
+                    "ts": 1750193301,
+                    "value": false
+                },
+                {
+                    "ts": 1750193303,
+                    "value": false
+                },
+                {
+                    "ts": 1750193305,
+                    "value": false
+                },
+                {
+                    "ts": 1750193307,
+                    "value": false
+                },
+                {
+                    "ts": 1750193309,
+                    "value": false
+                },
+                {
+                    "ts": 1750193311,
+                    "value": false
+                },
+                {
+                    "ts": 1750193313,
+                    "value": false
+                },
+                {
+                    "ts": 1750193315,
+                    "value": false
+                },
+                {
+                    "ts": 1750193317,
+                    "value": false
+                },
+                {
+                    "ts": 1750193319,
+                    "value": false
+                },
+                {
+                    "ts": 1750193321,
+                    "value": false
+                },
+                {
+                    "ts": 1750193323,
+                    "value": false
+                },
+                {
+                    "ts": 1750193325,
+                    "value": false
+                },
+                {
+                    "ts": 1750193327,
+                    "value": false
+                },
+                {
+                    "ts": 1750193329,
+                    "value": false
+                },
+                {
+                    "ts": 1750193332,
+                    "value": false
+                },
+                {
+                    "ts": 1750193334,
+                    "value": false
+                },
+                {
+                    "ts": 1750193336,
+                    "value": false
+                },
+                {
+                    "ts": 1750193338,
+                    "value": false
+                },
+                {
+                    "ts": 1750193340,
+                    "value": false
+                },
+                {
+                    "ts": 1750193342,
+                    "value": false
+                },
+                {
+                    "ts": 1750193344,
+                    "value": false
+                },
+                {
+                    "ts": 1750193346,
+                    "value": false
+                },
+                {
+                    "ts": 1750193348,
+                    "value": false
+                },
+                {
+                    "ts": 1750193350,
+                    "value": false
+                },
+                {
+                    "ts": 1750193352,
+                    "value": false
+                },
+                {
+                    "ts": 1750193354,
+                    "value": false
+                },
+                {
+                    "ts": 1750193356,
+                    "value": false
+                },
+                {
+                    "ts": 1750193358,
+                    "value": false
+                },
+                {
+                    "ts": 1750193360,
+                    "value": false
+                },
+                {
+                    "ts": 1750193362,
+                    "value": false
+                },
+                {
+                    "ts": 1750193364,
+                    "value": false
+                },
+                {
+                    "ts": 1750193366,
+                    "value": false
+                },
+                {
+                    "ts": 1750193368,
+                    "value": false
+                },
+                {
+                    "ts": 1750193370,
+                    "value": false
+                },
+                {
+                    "ts": 1750193372,
+                    "value": false
+                },
+                {
+                    "ts": 1750193374,
+                    "value": false
+                },
+                {
+                    "ts": 1750193420,
+                    "value": false
+                },
+                {
+                    "ts": 1750193422,
+                    "value": false
+                },
+                {
+                    "ts": 1750193424,
+                    "value": false
+                },
+                {
+                    "ts": 1750193426,
+                    "value": false
+                },
+                {
+                    "ts": 1750193428,
+                    "value": false
+                },
+                {
+                    "ts": 1750193430,
+                    "value": false
+                },
+                {
+                    "ts": 1750193432,
+                    "value": false
+                },
+                {
+                    "ts": 1750193434,
+                    "value": false
+                },
+                {
+                    "ts": 1750193436,
+                    "value": false
+                },
+                {
+                    "ts": 1750193438,
+                    "value": false
+                },
+                {
+                    "ts": 1750193440,
+                    "value": false
+                },
+                {
+                    "ts": 1750193442,
+                    "value": false
+                },
+                {
+                    "ts": 1750193444,
+                    "value": false
+                },
+                {
+                    "ts": 1750193446,
+                    "value": false
+                },
+                {
+                    "ts": 1750193448,
+                    "value": false
+                },
+                {
+                    "ts": 1750193450,
+                    "value": false
+                },
+                {
+                    "ts": 1750193452,
+                    "value": false
+                },
+                {
+                    "ts": 1750193454,
+                    "value": false
+                },
+                {
+                    "ts": 1750193456,
+                    "value": false
+                },
+                {
+                    "ts": 1750193458,
+                    "value": false
+                },
+                {
+                    "ts": 1750193460,
+                    "value": false
+                },
+                {
+                    "ts": 1750193462,
+                    "value": false
+                },
+                {
+                    "ts": 1750193465,
+                    "value": false
+                },
+                {
+                    "ts": 1750193467,
+                    "value": false
+                },
+                {
+                    "ts": 1750193469,
+                    "value": false
+                },
+                {
+                    "ts": 1750193471,
+                    "value": false
+                },
+                {
+                    "ts": 1750193473,
+                    "value": false
+                },
+                {
+                    "ts": 1750193475,
+                    "value": false
+                },
+                {
+                    "ts": 1750193477,
+                    "value": false
+                },
+                {
+                    "ts": 1750193479,
+                    "value": false
+                },
+                {
+                    "ts": 1750193481,
+                    "value": false
+                },
+                {
+                    "ts": 1750193483,
+                    "value": false
+                },
+                {
+                    "ts": 1750193485,
+                    "value": false
+                },
+                {
+                    "ts": 1750193487,
+                    "value": false
+                },
+                {
+                    "ts": 1750193489,
+                    "value": false
+                },
+                {
+                    "ts": 1750193491,
+                    "value": false
+                },
+                {
+                    "ts": 1750193493,
+                    "value": false
+                },
+                {
+                    "ts": 1750193495,
+                    "value": false
+                },
+                {
+                    "ts": 1750193497,
+                    "value": false
+                },
+                {
+                    "ts": 1750193499,
+                    "value": false
+                },
+                {
+                    "ts": 1750193501,
+                    "value": false
+                },
+                {
+                    "ts": 1750193503,
+                    "value": false
+                },
+                {
+                    "ts": 1750193505,
+                    "value": false
+                },
+                {
+                    "ts": 1750193507,
+                    "value": false
+                },
+                {
+                    "ts": 1750193509,
+                    "value": false
+                },
+                {
+                    "ts": 1750193511,
+                    "value": false
+                },
+                {
+                    "ts": 1750193513,
+                    "value": false
+                },
+                {
+                    "ts": 1750193515,
+                    "value": false
+                },
+                {
+                    "ts": 1750193518,
+                    "value": false
+                },
+                {
+                    "ts": 1750193520,
+                    "value": false
+                },
+                {
+                    "ts": 1750193522,
+                    "value": false
+                },
+                {
+                    "ts": 1750193524,
+                    "value": false
+                },
+                {
+                    "ts": 1750193526,
+                    "value": false
+                },
+                {
+                    "ts": 1750193528,
+                    "value": false
+                },
+                {
+                    "ts": 1750193530,
+                    "value": false
+                },
+                {
+                    "ts": 1750193532,
+                    "value": false
+                },
+                {
+                    "ts": 1750193534,
+                    "value": false
+                },
+                {
+                    "ts": 1750193536,
+                    "value": false
+                },
+                {
+                    "ts": 1750193538,
+                    "value": false
+                },
+                {
+                    "ts": 1750193540,
+                    "value": false
+                },
+                {
+                    "ts": 1750193542,
+                    "value": false
+                },
+                {
+                    "ts": 1750193544,
+                    "value": false
+                },
+                {
+                    "ts": 1750193546,
+                    "value": false
+                },
+                {
+                    "ts": 1750193548,
+                    "value": false
+                },
+                {
+                    "ts": 1750193550,
+                    "value": false
+                },
+                {
+                    "ts": 1750193552,
+                    "value": false
+                },
+                {
+                    "ts": 1750193554,
+                    "value": false
+                },
+                {
+                    "ts": 1750193556,
+                    "value": false
+                },
+                {
+                    "ts": 1750193558,
+                    "value": false
+                },
+                {
+                    "ts": 1750193560,
+                    "value": false
+                },
+                {
+                    "ts": 1750193562,
+                    "value": false
+                },
+                {
+                    "ts": 1750193564,
+                    "value": false
+                },
+                {
+                    "ts": 1750193566,
+                    "value": false
+                },
+                {
+                    "ts": 1750193568,
+                    "value": false
+                },
+                {
+                    "ts": 1750193571,
+                    "value": false
+                },
+                {
+                    "ts": 1750193596,
+                    "value": false
+                },
+                {
+                    "ts": 1750193598,
+                    "value": false
+                },
+                {
+                    "ts": 1750193600,
+                    "value": false
+                },
+                {
+                    "ts": 1750193602,
+                    "value": false
+                },
+                {
+                    "ts": 1750193604,
+                    "value": false
+                },
+                {
+                    "ts": 1750193606,
+                    "value": false
+                },
+                {
+                    "ts": 1750193608,
+                    "value": false
+                },
+                {
+                    "ts": 1750193610,
+                    "value": false
+                },
+                {
+                    "ts": 1750193612,
+                    "value": false
+                },
+                {
+                    "ts": 1750193615,
+                    "value": false
+                },
+                {
+                    "ts": 1750193645,
+                    "value": false
+                },
+                {
+                    "ts": 1750193647,
+                    "value": false
+                },
+                {
+                    "ts": 1750193649,
+                    "value": false
+                },
+                {
+                    "ts": 1750193651,
+                    "value": false
+                },
+                {
+                    "ts": 1750193653,
+                    "value": false
+                },
+                {
+                    "ts": 1750193655,
+                    "value": false
+                },
+                {
+                    "ts": 1750193657,
+                    "value": false
+                },
+                {
+                    "ts": 1750193659,
+                    "value": false
+                },
+                {
+                    "ts": 1750193661,
+                    "value": false
+                },
+                {
+                    "ts": 1750193663,
+                    "value": false
+                },
+                {
+                    "ts": 1750193665,
+                    "value": false
+                },
+                {
+                    "ts": 1750193667,
+                    "value": false
+                },
+                {
+                    "ts": 1750193669,
+                    "value": false
+                },
+                {
+                    "ts": 1750193671,
+                    "value": false
+                },
+                {
+                    "ts": 1750193673,
+                    "value": false
+                },
+                {
+                    "ts": 1750193675,
+                    "value": false
+                },
+                {
+                    "ts": 1750193678,
+                    "value": false
+                },
+                {
+                    "ts": 1750193680,
+                    "value": false
+                },
+                {
+                    "ts": 1750193682,
+                    "value": false
+                },
+                {
+                    "ts": 1750193684,
+                    "value": false
+                },
+                {
+                    "ts": 1750193686,
+                    "value": false
+                },
+                {
+                    "ts": 1750193688,
+                    "value": false
+                },
+                {
+                    "ts": 1750193690,
+                    "value": false
+                },
+                {
+                    "ts": 1750193692,
+                    "value": false
+                },
+                {
+                    "ts": 1750193694,
+                    "value": false
+                },
+                {
+                    "ts": 1750193696,
+                    "value": false
+                },
+                {
+                    "ts": 1750193698,
+                    "value": false
+                },
+                {
+                    "ts": 1750193700,
+                    "value": false
+                },
+                {
+                    "ts": 1750193702,
+                    "value": false
+                },
+                {
+                    "ts": 1750193704,
+                    "value": false
+                },
+                {
+                    "ts": 1750193706,
+                    "value": false
+                },
+                {
+                    "ts": 1750193708,
+                    "value": false
+                },
+                {
+                    "ts": 1750193710,
+                    "value": false
+                },
+                {
+                    "ts": 1750193712,
+                    "value": false
+                },
+                {
+                    "ts": 1750193714,
+                    "value": false
+                },
+                {
+                    "ts": 1750193716,
+                    "value": false
+                },
+                {
+                    "ts": 1750193719,
+                    "value": false
+                },
+                {
+                    "ts": 1750193721,
+                    "value": false
+                },
+                {
+                    "ts": 1750193723,
+                    "value": false
+                },
+                {
+                    "ts": 1750193725,
+                    "value": false
+                },
+                {
+                    "ts": 1750193727,
+                    "value": false
+                },
+                {
+                    "ts": 1750193729,
+                    "value": false
+                },
+                {
+                    "ts": 1750193731,
+                    "value": false
+                },
+                {
+                    "ts": 1750193733,
+                    "value": false
+                },
+                {
+                    "ts": 1750193735,
+                    "value": false
+                },
+                {
+                    "ts": 1750193737,
+                    "value": false
+                },
+                {
+                    "ts": 1750193739,
+                    "value": false
+                },
+                {
+                    "ts": 1750193741,
+                    "value": false
+                },
+                {
+                    "ts": 1750193743,
+                    "value": false
+                },
+                {
+                    "ts": 1750193745,
+                    "value": false
+                },
+                {
+                    "ts": 1750193747,
+                    "value": false
+                },
+                {
+                    "ts": 1750193749,
+                    "value": false
+                },
+                {
+                    "ts": 1750193751,
+                    "value": false
+                },
+                {
+                    "ts": 1750193753,
+                    "value": false
+                },
+                {
+                    "ts": 1750193755,
+                    "value": false
+                },
+                {
+                    "ts": 1750193757,
+                    "value": false
+                },
+                {
+                    "ts": 1750193759,
+                    "value": false
+                },
+                {
+                    "ts": 1750193761,
+                    "value": false
+                },
+                {
+                    "ts": 1750193763,
+                    "value": false
+                },
+                {
+                    "ts": 1750193765,
+                    "value": false
+                },
+                {
+                    "ts": 1750193767,
+                    "value": false
+                },
+                {
+                    "ts": 1750193769,
+                    "value": false
+                },
+                {
+                    "ts": 1750193771,
+                    "value": false
+                },
+                {
+                    "ts": 1750193774,
+                    "value": false
+                },
+                {
+                    "ts": 1750193776,
+                    "value": false
+                },
+                {
+                    "ts": 1750193778,
+                    "value": false
+                },
+                {
+                    "ts": 1750193780,
+                    "value": false
+                },
+                {
+                    "ts": 1750193782,
+                    "value": false
+                },
+                {
+                    "ts": 1750193784,
+                    "value": false
+                },
+                {
+                    "ts": 1750193786,
+                    "value": false
+                },
+                {
+                    "ts": 1750193788,
+                    "value": false
+                },
+                {
+                    "ts": 1750193790,
+                    "value": false
+                },
+                {
+                    "ts": 1750193792,
+                    "value": false
+                },
+                {
+                    "ts": 1750193794,
+                    "value": false
+                },
+                {
+                    "ts": 1750193796,
+                    "value": false
+                },
+                {
+                    "ts": 1750193798,
+                    "value": false
+                },
+                {
+                    "ts": 1750193800,
+                    "value": false
+                },
+                {
+                    "ts": 1750193802,
+                    "value": false
+                },
+                {
+                    "ts": 1750193804,
+                    "value": false
+                },
+                {
+                    "ts": 1750193806,
+                    "value": false
+                },
+                {
+                    "ts": 1750193808,
+                    "value": false
+                },
+                {
+                    "ts": 1750193810,
+                    "value": false
+                },
+                {
+                    "ts": 1750193812,
+                    "value": false
+                },
+                {
+                    "ts": 1750193814,
+                    "value": false
+                },
+                {
+                    "ts": 1750193816,
+                    "value": false
+                }
+            ]
         }
     ]
 }

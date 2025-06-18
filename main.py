@@ -10,3 +10,17 @@
 # 1. Start all the Sensors
 # 2. Start the Webserver
 # 3. Somehow transfer data from the Sensors to the Webserver
+
+import subprocess
+
+programs = [
+    ["python", "sensors/lichtwiderstandsSensor.py"],
+    ["python", "sensors/mikrofonSensor.py"],
+    ["python", "sensors/temperaturSensor.py"]
+]
+
+# Start each one in parallel
+processes = []
+for prog in programs:
+    p = subprocess.Popen(prog)
+    processes.append(p)

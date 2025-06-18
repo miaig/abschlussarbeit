@@ -1,23 +1,16 @@
 # PiWebSense
 
-## Milestones
-
-### Milestone 1
-
-The Goal is to display and visualize data received/measured from a Raspberry Pi on a webinterface.
-
-### Milestone 2
-
-The Raspberry Pi should be integratable to a Home Assistant Server and be used as as sensor input and opitionally logic level output.
-
-### Milestone 3
-
-Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor gateway.
+## Git
+This Repo gets pushed to three git hosts in the following order: 
+ - [git.miaig.dev](https://git.miaig.dev/mia/abschlussarbeit)
+ - [git.gay](https://git.gay/mia/abschlussarbeit)
+ - [github.com](https://github.com/miaig/abschlussarbeit)
 
 ## Tech Stack / Hardware Requirements
 
-- **Raspberry Pi**: Model 4
-- **Programming languages**: Python, jinja, HTML, CSS, JavaScript
+- Raspberry Pi Model 4 for the sensors
+- A Second Pc/Laptop/Server/Pi that'll host the Webserver
+- **Programming languages used**: Python, jinja, HTML, CSS, JavaScript
 - **Frameworks/tools/Libraries**:
   - Webserver:
     - flask
@@ -38,14 +31,17 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
     - digitalio
     - RPI.GPIO
     
-- **Sensors**:
+- **Exxmple Sensors**:
   - LDR (Lightsensor)
   - Sound Detector
   - Temperature and humidity
 
 ## Docs
 
-- The data needs to be providet in the following format:
+This Program aims to receive Data from a dynamic amount of Sensors and Display the data on the Webserver. This can be done using the example Sensors in the sensor folder or by just writing your own ones using the further down documented Json file. The server and port get defined in sensors/sender.py. That file can be imported as shown in the examples.
+
+The Webserver distiguishes between two update formats: live and history.
+The data needs to be providet in the following format to be considered a history update. To be considered a live update the fielts type and unit have to be removed from the transmission.
 
   ```Json
       {
@@ -90,48 +86,19 @@ Data should be sent and received via MQTT to an ESP32. The Pi acts as a sensor g
 - `.envrc`
   This is also a bit of linux nixos magic to automatically set up the development environment using direnv
 - `main.py`
-  The main file for the project
+  This file starts all sensors at once for easy deployment at a site.
 
-### Git Help
+## Instalation
 
-![A Git Cheatsheet](images/gitHelp.png "Git Cheatsheet")
+### Sensors
+To Install the exmple Sensors, simply install all the Requiered packages mentioned further above 
 
-### MarkDown Help
-
-![A MarkDown Cheatsheet](images/mdHelp.png "MarkDown Cheatsheet")
-
-### Html Help
-
-![A Html Cheatsheet](images/htmlHelp.png "Html Cheatsheet")
-
-### Css Help
-
-![A Css Cheatsheet](images/cssHelp.png "Css Cheatsheet")
-
-### JavaScript Help
-
-![A JavaScript Cheatsheet](images/javascriptHelp.png "JavaScript Cheatsheet")
-
-### Jinja Help
-
-![A Jinja Cheatsheet](images/jinjaHelp.png "Jinja Cheatsheet")
-
-
-## Arbeitsaufträge / Aufgabeneinteilung
-
-
-| Mia                               | Chiara                                        |
-| --------------------------------- | --------------------------------------------- |
-| Git                               | Daten von RPI erfassen und sauber abspeichern |
-| Readme                            | Präsentation                                  |
-| Daten an einem Webserver anzeigen |                                               |
-
-### Acknowledgments
+## Acknowledgments
 
 [Chiara](https://git.miaig.dev/chiara)
 [Mia](https://git.miaig.dev/mia)
 
-### License
+## License
 
 PiWebSense
 Copyright (C) 2025 Mia, Chiara

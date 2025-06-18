@@ -4,6 +4,7 @@ import adafruit_dht
 import json
 from datetime import datetime
 import os
+from sender import send_data as s
 
 dhtDevice = adafruit_dht.DHT11(board.D23)
 
@@ -26,6 +27,19 @@ datatemp = {
         }
     ]
 }
+datalive = {
+    "location": "Hausstrasse - 3",
+     "sensors": [
+        {
+            "id": "sensor_002",
+            "readings": [{}]
+        },
+        {
+            "id": "sensor_003",
+            "readings": [{}]
+        }
+     ]
+}
 
 def load_data():
             if os.path.exists(json_file):
@@ -43,18 +57,32 @@ max_entries=3000
 def capture_and_store(temperature_c,humidity):
     timestamp = int(time.time())
     data=load_data()
+    livetemp = datalive.copy()
 
     temp_sensor = next(s for s in data["sensors"] if s["type"] == "temperature")
     hum_sensor = next(s for s in data["sensors"] if s["type"] == "humidity")
+    livetemp_sensor = datalive["sensors"][0]
+    livehum_sensor = datalive["sensors"][1]
 
-    temp_sensor["readings"].append({"ts": timestamp, "value": temperature_c})
-    hum_sensor["readings"].append({"ts": timestamp, "value": humidity})
+    humentry = { "ts": timestamp, "value": humidity}
+    tempentry = { "ts": timestamp, "value": temperature_c}
+    
+
+    temp_sensor["readings"].append(tempentry)
+    hum_sensor["readings"].append(humentry)
+    livetemp_sensor["readings"][0] = tempentry
+    livehum_sensor["readings"][0] = humentry
 
     if len(temp_sensor["readings"]) > max_entries:
         temp_sensor["readings"] = temp_sensor["readings"][-max_entries:]
     if len(hum_sensor["readings"]) > max_entries:
         hum_sensor["readings"] = hum_sensor["readings"][-max_entries:]
 
+    s(livetemp_sensor)
+    s(livehum_sensor)
+    livetemp.clear()
+    livetemp_sensor.clear()
+    livehum_sensor.clear()
     save_data(data)
 
 

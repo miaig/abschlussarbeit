@@ -2,7 +2,7 @@ import socket
 import json
 import time
 
-SERVER_HOST = "127.0.0.1"
+SERVER_HOST = "172.20.10.5"
 SERVER_PORT = 9999
 
 def send_data(data):
